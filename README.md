@@ -1,4 +1,4 @@
 # Bienvenido a Ian-Bot MD +543876577197 -
-# Saludos en Especial # 🎃 </////
-# Miguel - Bautista - Jonas - Camila - Dilan - Bittiel #
-![NINO](https://github.com/user-attachments/assets/c181defa-a8a2-4ae8-a660-260a38719796)
+# Saludos en Especial # 🎃 </////> 🎃
+# Miguel - Bautista - Jonas - Camila - Dilan #
+![PREV-Nino](https://github.com/user-attachments/assets/05965278-8791-42df-86e6-0ac8382155d6)
