@@ -10,7 +10,7 @@ const handler = async (m, {isPrems, conn}) => {
   const expp = Math.floor(Math.random() * 5000);
 
   global.db.data.users[m.sender].estrellas += dia;
-  global.db.data.users[m.sender].money += luffy;
+  global.db.data.users[m.sender].money += Ian;
   global.db.data.users[m.sender].joincount += tok;
   global.db.data.users[m.sender].exp += expp;
 
