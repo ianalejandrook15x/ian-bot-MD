@@ -12,8 +12,8 @@ try {
 await fs.rmdir("./LuffyJadiBot/" + uniqid, { recursive: true, force: true })
 await parentw.sendMessage(m.chat, { text: '🚩 Sub-Bot eliminado.' }, { quoted: fkontak })
 } catch(err) {
-if (err.code === 'ENOENT' && err.path === `./LuffyJadiBot/${uniqid}`) {
-await parentw.sendMessage(m.chat, { text: "🍟 No cuentas con ninguna sesión de Sub-Bot." }, { quoted: fkontak })
+if (err.code === 'ENOENT' && err.path === `./IanJadiBot/${uniqid}`) {
+await parentw.sendMessage(m.chat, { text: "🌸 No cuentas con ninguna sesión de Sub-Bot." }, { quoted: fkontak })
 } else {
 await m.react(error)
 }}}
