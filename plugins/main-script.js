@@ -14,7 +14,7 @@ let txt = `*乂  S C R I P T  -  M A I N  乂*\n\n`
     txt += `✩  *Url* : ${json.html_url}\n`
     txt += `✩  *Forks* : ${json.forks_count}\n`
     txt += `✩  *Stars* : ${json.stargazers_count}\n\n`
-    txt += `> 🍟 *${packname}*`
+    txt += `> 🌸 *${packname}*`
 
 let img = imagen1
 
