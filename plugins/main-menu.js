@@ -23,7 +23,7 @@ let tags = {
   'tools': 'HERRAMIENTAS 🔧',
   'info': 'INFORMACIÓN 🌺',
   'owner': 'CREADOR 👑', 
-  'mods': 'STAFF IAN 🍟',
+  'mods': 'STAFF IAN 🌸',
   'audio': 'AUDIOS 🔉', 
   'ai': 'AI 🌹',
   'transformador': 'CONVERTIDORES 🚩',
@@ -46,7 +46,7 @@ const defaultMenu = {
 %readmore
 ╭────═[ *INFO - USER* ]═─────⋆
 │╭───────────────···
-┴│✯ 🍟 *Bot:* Ian Bot - MD 
+┴│✯ 🌸 *Bot:* Ian Bot - MD 
 ││✯ 🚩 *Modo* Público
 ││✯ 📚 *Baileys:* Multi Device
 ││✯ 🕒 *Tiempo Activo:* %muptime
