@@ -65,7 +65,7 @@ return response.data;
 return text;
 }}
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `╰⊱❗️⊱ *ACCIÓN MAL USADA* ⊱❗️⊱╮\n\n🍟 *DEBE DE USAR EL COMANDO COMO EN ESTE EJEMPLO:*\n${usedPrefix + command} *tu foto*`
+if (!text) throw `╰⊱❗️⊱ *ACCIÓN MAL USADA* ⊱❗️⊱╮\n\n🌸 *DEBE DE USAR EL COMANDO COMO EN ESTE EJEMPLO:*\n${usedPrefix + command} *tu foto*`
 try {
 conn.reply(m.chat, '🚩 *Enviando su música de Spotify*', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
@@ -79,7 +79,7 @@ if (!songInfo.length) throw `*No se encontró la canción*`
 let res = songInfo[0]
 let fileSizeInMB = (await getBuffer(res.url)).length / (1024 * 1024)
 let shortURL = await getTinyURL(res.url)
-const info = `🍟 *TITULO:*
+const info = `🌸 *TITULO:*
 _${res.name}_
 
 🚩 *ARTISTA:*
