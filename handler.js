@@ -735,7 +735,7 @@ rowner: '「👑」 *Esta función solo puede ser usada por mi creador*\n\n> Ofc
 owner: '「👑」 *Esta función solo puede ser usada por mi desarrollador.', 
 mods: '「🤴🏻」 *Esta función solo puede ser usada por mis desarrolladores.*', 
 premium: '「🍧」 *Esta función solo es para usuarios Premium.', 
-group: '「🐢」 *Esta funcion solo puede ser ejecutada en grupos.*', 
+group: '「🌺」 *Esta funcion solo puede ser ejecutada en grupos.*', 
 private: '「🍭」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「👑」 *Este comando solo puede ser usado por admins.*', 
 botAdmin: '「🚩」 *Para usar esta función debo ser admin.*', 
