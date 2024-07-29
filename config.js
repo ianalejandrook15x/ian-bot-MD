@@ -55,11 +55,11 @@ global.gp3 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //Multi Bots
 global.gp4 = 'https://chat.whatsapp.com/LZXw8nsXoodGGRN61zRtVG' //Grupo Ian
 global.comunidad1 = 'https://chat.whatsapp.com/FJr05BxtRfH6Fsi6voyjRS' //Comunidad Yaemori
 global.comunidad2 = 'https://chat.whatsapp.com/GpbF3JCTEr2CSj3zLJ1IQj' //Comunidad de Moonligth
-global.channel = 'https://whatsapp.com/channel/0029VajkZ6blXnlwPZmbuH1u' //Canal Oficial
-global.channel2 = 'https://whatsapp.com/channel/0029Vablj8M05MUnustq3q1S' //Canal MoonLight Team 
+global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal Oficial
+global.channel2 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal MoonLight Team 
 global.yt = 'https://www.youtube.com/@ianalejandrook14' //Canal De Youtube
 global.md = 'https://github.com/ianalejandrook15x/ianxdd' //Github Oficial
-global.fb = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Facebook Del Propietario
+global.fb = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWkwL' //Facebook Del Propietario
 global.tiktok = 'https://tiktok.com/@ian.ian271' //Cuenta tiktok
 
 //• ↳ ◜𝑻𝑰𝑬𝑴𝑷𝑶◞ • 🕒
