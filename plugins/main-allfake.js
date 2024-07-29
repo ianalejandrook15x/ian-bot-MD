@@ -1,4 +1,3 @@
-
 import pkg from '@whiskeysockets/baileys'
 import fs from 'fs'
 import fetch from 'node-fetch'
@@ -36,14 +35,14 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 global.creador = 'Wa.me/543876577197'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/543876639332'
-global.namechannel = '『✯ Team Comunity Ian ✯』'
+global.namechannel = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
 global.namechannel2 = '𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁 - 𝗧𝗲𝗮𝗺'
-global.namecomu = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 IanBot'
+global.namecomu = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗜𝗮𝗻𝗕𝗼𝘁'
 global.namecomu2 = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁'
-global.groupsuport = '𝗦𝗼𝗽𝗼𝗿𝘁𝗲 Ian𝗕𝗼𝘁'
-global.colab1 = '𝗚𝗮𝘁𝗮𝗕𝗼𝘁 & Ian𝗕𝗼𝘁'
-global.colab2 = '𝗦𝗵𝗶𝘇𝘂𝗸𝗮𝗕𝗼𝘁 & Ian𝗕𝗼𝘁'
-global.colab3 = '𝗦𝘂𝗺𝗶𝗦𝗮𝗸𝘂𝗿𝗮𝘀𝗮𝘄𝗮 & Ian𝗕𝗼𝘁'
+global.groupsuport = '𝗦𝗼𝗽𝗼𝗿𝘁𝗲 𝗜𝗮𝗻𝗕𝗼𝘁'
+global.colab1 = '𝗚𝗮𝘁𝗮𝗕𝗼𝘁 & 𝗜𝗮𝗻𝗕𝗼𝘁'
+global.colab2 = '𝗦𝗵𝗶𝘇𝘂𝗸𝗮𝗕𝗼𝘁 & 𝗜𝗮𝗻𝗕𝗼𝘁'
+global.colab3 = '𝗦𝘂𝗺𝗶𝗦𝗮𝗸𝘂𝗿𝗮𝘀𝗮𝘄𝗮 & 𝗜𝗮𝗻𝗕𝗼𝘁'
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
