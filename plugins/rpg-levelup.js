@@ -1,4 +1,3 @@
-
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 import fetch from 'node-fetch'
 
@@ -21,7 +20,7 @@ txt += `*${before}* ➔ *${user.level}* [ ${user.role} ]\n\n`
 txt += `• 🧬 Nivel anterior : ${before}\n`
 txt += `• 🧬 Nuevos niveles : ${user.level}\n`
 txt += `• 📅 Fecha : ${new Date().toLocaleString('id-ID')}\n\n`
-txt += `🚩 *Nota:* _Cuanto más a menudo interactúes con *LuffyBot*, mayor será tu nivel_`
+txt += `🚩 *Nota:* _Cuanto más a menudo interactúes con *IanBot*, mayor será tu nivel_`
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)}}
 
 handler.help = ['levelup']
