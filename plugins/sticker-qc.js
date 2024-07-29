@@ -1,4 +1,3 @@
-
 /* Codigo copiado de GataBot-MD */
 
 import { sticker } from '../lib/sticker.js';
