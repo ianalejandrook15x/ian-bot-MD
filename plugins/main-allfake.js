@@ -98,15 +98,15 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363192435027853@newsletter', newsletterName: "『✯ Team Comunity Luffy ✯』", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363192435027853@newsletter', newsletterName: "『✯ Team Comunity Ian ✯』", serverMessageId: -1 }
 }}, { quoted: m }
 
 global.icono = [ 
-'https://qu.ax/vQmu.jpg',
-'https://qu.ax/Ptmh.jpg',
-'https://qu.ax/awYR.jpg',
-'https://qu.ax/ljre.jpg',
-'https://qu.ax/YkHj.jpg'
+'https://i.pinimg.com/originals/c8/09/6b/c8096be577e42e5aec52e7a6066bd037.jpg',
+'https://i.pinimg.com/originals/de/71/d6/de71d64ae6174176ab9cd108bf7c7c3c.jpg',
+'https://i.pinimg.com/736x/89/c8/3e/89c83e8620b24ac23ba67afb4f62281f.jpg',
+'https://i.pinimg.com/originals/8a/63/04/8a6304985aa67c8133bf8881256d31be.jpg',
+'https://i.pinimg.com/736x/50/d5/f0/50d5f02d3ecd9ea2044d6d941a4dc1aa.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363263466636910@newsletter", serverMessageId: 100, newsletterName: '『✯ Team Comunity Ian ✯』', }, externalAdReply: { showAdAttribution: true, title: packname, body: '🍟 ¡Super Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
