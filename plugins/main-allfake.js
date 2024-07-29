@@ -54,7 +54,7 @@ global.emoji = '🚩'
 global.emoji2 = '🍟'
 global.emoji3 = '✨️'
 global.emoji4 = '🍭'
-global.emoji5 = '🐢'
+global.emoji5 = '🌺'
 global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
 
 //mensaje en espera
