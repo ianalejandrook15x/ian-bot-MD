@@ -15,7 +15,7 @@ let username = conn.getName(who)
 let tiempoEspera = 15
 if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
 let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000))
-conn.reply(m.chat, `🍟 Ya has iniciado una apuesta recientemente, espera *⏱️ ${tiempoRestante}* para apostar nuevamente`, m, rcanal)
+conn.reply(m.chat, `🌸 Ya has iniciado una apuesta recientemente, espera *⏱️ ${tiempoRestante}* para apostar nuevamente`, m, rcanal)
 return
 }
 cooldowns[m.sender] = Date.now()
@@ -25,13 +25,13 @@ if (args.length < 1) return conn.reply(m.chat, '🚩 Ingresa la cantidad de ' + 
 if (user.estrellas >= count * 1) {
 user.estrellas -= count * 1
 if (Aku > Kamu) {
-conn.reply(m.chat, '`🍟 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 🌟 Estrellas.`.trim(), m, rcanal)
+conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 🌟 Estrellas.`.trim(), m, rcanal)
 } else if (Aku < Kamu) {
 user.estrellas += count * 2
-conn.reply(m.chat, '`🍟 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 🌟 Estrellas.`.trim(), m, rcanal)
+conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 🌟 Estrellas.`.trim(), m, rcanal)
 } else {
 user.estrellas += count * 1
-conn.reply(m.chat, '`🍟 Veamos que numeros tienen!`\n\n'+ `➠ *LuffyBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 🌟 Estrellas.`.trim(), m, rcanal)}
+conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *LuffyBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 🌟 Estrellas.`.trim(), m, rcanal)}
 } else conn.reply(m.chat, `No tienes *${formatNumber(count)} 🌟 Estrellas* para apostar!`.trim(), m, rcanal)}
 
 handler.help = ['apostar *<cantidad>*']
