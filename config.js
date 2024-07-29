@@ -29,11 +29,11 @@ global.prems = []
 global.packname = '⪛✰ 𝐈𝐚𝐧 𝐁𝐨𝐭 - 𝐌𝐃 ✰⪜'
 global.author = 'Iᴀɴᴀʟᴇᴊᴀɴᴅʀᴏᴏᴋ15x 👑'
 global.wm = '✨◌*̥₊ IᴀɴBᴏᴛ-MD ◌❐⚡༉'
-global.titulowm = 'IanBot-MD 🍟'
+global.titulowm = 'IanBot-MD 🌸'
 global.titulowm2 = 'ianalejandrook15x'
 global.igfg = '𝕀𝕒𝕟𝕒𝕝𝕖𝕛𝕒𝕟𝕕𝕣𝕠𝕠𝕜15𝕩'
 global.botname = 'Iᴀɴ Bᴏᴛ - MD 🚩'
-global.dev = '🚩 Powered By あ S_Iᴀɴ あ'
+global.dev = '🚩 Powered By あ O_Iᴀɴ あ'
 global.textbot = 'Ian : Ianalejandrook15x 🚩'
 global.vs = '2.0.2'
 
