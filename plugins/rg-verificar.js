@@ -10,7 +10,7 @@ if (!name) throw '*『✦』No puedes registrarte sin nombre, el nombre es oblig
 if (!age) throw '*『✦』No puedes registrarte sin la edad, la edad es opcional. Inténtelo de nuevo.*'
 if (name.length >= 30) throw '*『✦』El nombre no debe de tener mas de 30 caracteres.*' 
 age = parseInt(age)
-if (age > 999) throw '*『😐』Migue busca Shuggar*'
+if (age > 999) throw '*『👀』Migue busca Shuggar*'
 if (age < 5) throw '*『🍼』Ven aquí, te adoptare!!*'
 user.name = name.trim()
 user.age = age
