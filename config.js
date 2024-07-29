@@ -33,7 +33,7 @@ global.titulowm = 'IanBot-MD 🌸'
 global.titulowm2 = 'ianalejandrook15x'
 global.igfg = '𝕀𝕒𝕟𝕒𝕝𝕖𝕛𝕒𝕟𝕕𝕣𝕠𝕠𝕜15𝕩'
 global.botname = 'Iᴀɴ Bᴏᴛ - MD 🚩'
-global.dev = '🚩 Powered By あ O_Iᴀɴ あ'
+global.dev = '🚩 Powered By あ Ale_Iᴀɴ あ'
 global.textbot = 'Ian : Ianalejandrook15x 🚩'
 global.vs = '2.0.2'
 
@@ -49,11 +49,11 @@ global.welcome = fs.readFileSync('./media/Welcome.jpg')
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '✨️ 𝗦𝘂𝗽𝗲𝗿 𝗜𝗮𝗻 🌸', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.gp1 = 'https://chat.whatsapp.com/GyNAwWzfhzP61XzxzBc7Sa' //Grupo Oficial De Ian
-global.gp2 = 'https://chat.whatsapp.com/Ksd32KH9zFoDmO1PJt44M7' //GataBot Y Yaemori
-global.gp3 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //Multi Bots
+global.gp1 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Grupo Oficial De Ian
+global.gp2 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //GataBot Y Yaemori
+global.gp3 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Multi Bots
 global.gp4 = 'https://chat.whatsapp.com/LZXw8nsXoodGGRN61zRtVG' //Grupo Ian
-global.comunidad1 = 'https://chat.whatsapp.com/FJr05BxtRfH6Fsi6voyjRS' //Comunidad Yaemori
+global.comunidad1 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Comunidad Yaemori
 global.comunidad2 = 'https://chat.whatsapp.com/GpbF3JCTEr2CSj3zLJ1IQj' //Comunidad de Moonligth
 global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal Oficial
 global.channel2 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal MoonLight Team 
