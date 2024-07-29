@@ -7,19 +7,19 @@ ${gp1}
 
  *◜🤍 COLABORACIONES 🤍◞*
 
-🍟 ${colab1}
+🌸 ${colab1}
 ${gp2}
 
-🍟 ${colab2}
+🌸 ${colab2}
 ${gp3}
 
-🍟 ${colab3}
+🌸 ${colab3}
 ${gp4}
 
-🍟 ${namecomu}
+🌸 ${namecomu}
 ${comunidad1}
 
-🍟 ${namecomu2}
+🌸 ${namecomu2}
 ${comunidad2}
 
  *◜🌸 CANALES OFICIALES 🌸◞*
@@ -36,7 +36,7 @@ await conn.sendFile(m.chat, imagen2, 'nino.jpg', gps, fkontak, null, rcanal)}
 
 handler.tags = ['main']
 handler.help = ['grupos']
-handler.command = /^grupos|gruposIan|linkre|luffygp|gpIan|gruposofc|gruposoficiales$/i
+handler.command = /^grupos|gruposIan|linkre|iangp|gpIan|gruposofc|gruposoficiales$/i
 handler.register = true
 
 export default handler
