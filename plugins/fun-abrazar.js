@@ -24,7 +24,7 @@ conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6].getRandom
 conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6].getRandom() }, gifPlayback: true, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: fkontak});
 }
 } catch {
-conn.reply(m.chat, '🍟 *¡Ocurrio un error!*', m, rcanal);
+conn.reply(m.chat, '🌸 *¡Ocurrio un error!*', m, rcanal);
 }};
 
 handler.help = ['abrazar'].map((v) => v + ' <@usuario>');
