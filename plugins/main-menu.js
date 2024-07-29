@@ -21,7 +21,7 @@ let tags = {
   'descargas': 'DESCARGAS 📥',
   'youtube': 'YOUTUBE PLAY 📥',
   'tools': 'HERRAMIENTAS 🔧',
-  'info': 'INFORMACIÓN 🐢',
+  'info': 'INFORMACIÓN 🌺',
   'owner': 'CREADOR 👑', 
   'mods': 'STAFF IAN 🍟',
   'audio': 'AUDIOS 🔉', 
@@ -39,7 +39,7 @@ const defaultMenu = {
 ┴│✯ 💌 *Cliente:* %name
 ││✯ ⚡️ *Exp:* %exp
 ││✯ 🌟 *Estrellas:* %estrellas
-││✯ 🐢 *Nivel:* %level
+││✯ 🌺 *Nivel:* %level
 ┬│✯ ⚓ *Rango:* %role
 │╰────────────────···
 ╰────────═┅═─────────
