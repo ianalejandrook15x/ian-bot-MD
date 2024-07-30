@@ -12,7 +12,7 @@ const resSimi = await simitalk(text);
 conn.sendMessage(m.chat, { text: resSimi.resultado.simsimi }, { quoted: m });
 await m.react(emojis)
 } catch {
-throw '🚩 *Ocurrió un error*';
+throw '🍂 *Ocurrió un error*';
 }};
 
 handler.help = ['simi', 'bot'];
