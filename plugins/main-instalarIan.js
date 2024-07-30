@@ -22,7 +22,7 @@ npm start
 
 _Utilice "comandos" para enviarle los comandos uno por uno 🚩_
 
-_Utilice "cafirexos" para enviarle la instalación por el host *Cafirexos* 🚩_`
+_Utilice "infinity" para enviarle la instalación por el host *Infinity* 🚩_`
 
 conn.reply(m.chat, texto, m, rcanal )
 
@@ -43,7 +43,7 @@ m.reply('npm start')
 }
 
 if (/^cafirexos$/i.test(m.text) ) {
-conn.reply(m.chat, '✏️ *Instalación por Cafirexos*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Área de clientes:\nhttps://clientes.cafirexos.com\n\n• Panel:\nhttps://panel.cafirexos.com', m, rcanal)
+conn.reply(m.chat, '✏️ *Instalación por Cafirexos*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Estados de nuestro Servicios:\nhttps://status.infinitywa-host.com/\n\n• Panel:\nhttps://panel.infinitywa-host.com', m, rcanal)
 await delay(2000 * 1)
 conn.sendMessage(m.chat, {image: {url: 'https://rare-gallery.com/mocahbig/62122-Nino-NakanoNino-Nakano.png'}, caption: ''}, {quoted: fkontak})
 await delay(1000 * 1)
