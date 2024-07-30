@@ -14,7 +14,7 @@ let Ian = `🚩 *Respeta las reglas de IanBot*\n
 ⚠️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de Ian.*
 
 ${global.md}`.trim()
-await conn.reply(m.chat, luffy, m, fake)
+await conn.reply(m.chat, ian, m, fake)
 
 }
 handler.help = ['botreglas']
