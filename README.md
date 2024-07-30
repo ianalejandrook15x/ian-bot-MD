@@ -1,3 +1,8 @@
-# Saludos en especial 🐉
-# Messi - Miguel - Bautista - Camila - Dilan - Hugo - Yoseli - Yoshiko - Bitel - Jonas - Jose - Valentina - Diego
-![messi](https://github.com/user-attachments/assets/2933df70-283e-4f32-b72e-fe695e5a0f76)
+# *Hola Bienvenido al repositorio de Ian-Bot*
+# *Disfruta tu Estadia* 🌸
+![nakanonino](https://github.com/user-attachments/assets/e063f817-6db7-42eb-afe1-14cc57107d20)
+# *este bot se encuentra en desarrollo*
+
+
+
+# *Gracias por preferirnos*
