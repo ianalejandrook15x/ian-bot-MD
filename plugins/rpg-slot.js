@@ -3,7 +3,7 @@ let reg = 60
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
 
-let fa = `🚩 *Cuanto Quieres Apostar?*\n\n💥 Ejemplo:
+let fa = `🍂 *Cuanto Quieres Apostar?*\n\n💥 Ejemplo:
 *${usedPrefix + command}* 50`.trim()
 if (!args[0]) throw fa
 if (isNaN(args[0])) throw fa
@@ -11,9 +11,9 @@ let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
 if (new Date - users.lastslot < 10000) throw `🕒 Espere *${msToTime(time - new Date())}* Para Usar De Nuevo`
-if (apuesta < 10) throw '🚩 Lo Mínimo Para Apostar Es 100 *XP*'
+if (apuesta < 10) throw '🍂 Lo Mínimo Para Apostar Es 100 *XP*'
 if (users.exp < apuesta) {
-throw `🚩 No Tienes Sufuciente *XP*`
+throw `🍂 No Tienes Sufuciente *XP*`
 }
 let emojis = ['✨️', '💖', '🤍', '☁️', '🐶']
 let a = Math.floor(Math.random() * emojis.length)
@@ -42,7 +42,7 @@ if (a == b && b == c) {
 end = `🎁 *GANASTE* 🎁\n*+${apuesta + apuesta + apuesta + apuesta + apuesta} XP*`
 users.exp += apuesta + apuesta
 } else if (a == b || a == c || b == c) {
-end = `🚩 *Casi lo logras sigue intentando*\n*Te regalo ${reg} XP*`
+end = `🍂 *Casi lo logras sigue intentando*\n*Te regalo ${reg} XP*`
 users.exp += reg
 } else {
 end = `🤯 *PERDISTE* 🤯\n*Te e quitado ${apuesta} XP*`
