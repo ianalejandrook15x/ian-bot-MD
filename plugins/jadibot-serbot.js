@@ -13,7 +13,7 @@ global.conns = []
 }
 let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems, isROwner }) => {
 if (!global.db.data.settings[conn.user.jid].jadibotmd && !isROwner) {
-conn.reply(m.chat, '🚩 Este Comando está deshabilitado por mi creador.', m, rcanal)
+conn.reply(m.chat, '🌸 Este Comando está deshabilitado por mi creador.', m, rcanal)
 return
 }
 let parentw = args[0] && args[0] == "plz" ? conn : await global.conn
@@ -35,7 +35,7 @@ const { version } = await fetchLatestBaileysVersion()
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: true,
-browser: ['Luffy Sub-Bot', 'Edge', '2.0.0'],
+browser: ['Ian Sub-Bot', 'Edge', '2.0.0'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -103,7 +103,7 @@ if (i >= 0) {
 delete global.conns[i]
 global.conns.splice(i, 1)
 }
-fs.rmdirSync(`./LuffyJadiBot/${serbotFolder}`, { recursive: true })
+fs.rmdirSync(`./IanJadiBot/${serbotFolder}`, { recursive: true })
 }
 }, 30000)
 let handler = await import("../handler.js")
