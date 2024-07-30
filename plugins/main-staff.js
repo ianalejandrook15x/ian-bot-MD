@@ -24,22 +24,22 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Bautista
-🌸 *Rol:* Travesti ✔
+🌸 *Rol:* Participante
 🚩 *Número:* Wa.me/543876576152
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Carlos
 🌸 *Rol:* Colaborador 😎
-🚩 *Número:* Wa.me/543876636841
+🚩 *Número:* Wa.me/50240874961
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Dilan
-🌸 *Rol:* Le gusta la Valentina 🐢
+🌸 *Rol:* Inspector de Rangos 🎃
 🚩 *Número:* Wa.me/543876636841
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Bitel
-🌸 *Rol:* Bitel el mas grande 🧸
+🌸 *Rol:* El Señor de la Nochee 🦇
 🚩 *Número:* Wa.me/51925730477
 ✨️ *GitHub:* https://github.com/ianalejandrook15x`
 await conn.sendFile(m.chat, icons, 'nino.jpg', staff.trim(), fkontak, true, {
