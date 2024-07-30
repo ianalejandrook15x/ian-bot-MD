@@ -24,7 +24,7 @@ Ian += `│ 🌸 *Usuarios Registrados ∙* ${totalreg}\n`
 Ian += `│ 🍭 *Grupos Registrados ∙* ${totalchats}\n`
 Ian += `│ 🕜 *Actividad ∙* ${muptime}\n`
 Ian += `╰─⬣`
-await conn.sendFile(m.chat, pp, 'nino.jpg', luffy, fkontak, null, rcanal)
+await conn.sendFile(m.chat, pp, 'nino.jpg', ian, fkontak, null, rcanal)
 }
 handler.help = ['status']
 handler.tags = ['info']
