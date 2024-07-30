@@ -40,9 +40,6 @@ global.namechannel2 = '𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁 - 𝗧𝗲𝗮𝗺'
 global.namecomu = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗜𝗮𝗻𝗕𝗼𝘁'
 global.namecomu2 = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁'
 global.groupsuport = '𝗦𝗼𝗽𝗼𝗿𝘁𝗲 𝗜𝗮𝗻𝗕𝗼𝘁'
-global.colab1 = '𝗚𝗮𝘁𝗮𝗕𝗼𝘁 & 𝗜𝗮𝗻𝗕𝗼𝘁'
-global.colab2 = '𝗦𝗵𝗶𝘇𝘂𝗸𝗮𝗕𝗼𝘁 & 𝗜𝗮𝗻𝗕𝗼𝘁'
-global.colab3 = '𝗦𝘂𝗺𝗶𝗦𝗮𝗸𝘂𝗿𝗮𝘀𝗮𝘄𝗮 & 𝗜𝗮𝗻𝗕𝗼𝘁'
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
@@ -58,10 +55,10 @@ global.emoji5 = '🌺'
 global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
 
 //mensaje en espera
-global.wait = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
+global.wait = '🕥 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼 ...*';
+global.waitt = '🕥 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼 ...*';
+global.waittt = '🕥 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼 ...*';
+global.waitttt = '🕥 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼 ...*';
 
 //Enlaces
 var canal = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u'  
@@ -102,13 +99,13 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://i.pinimg.com/originals/c8/09/6b/c8096be577e42e5aec52e7a6066bd037.jpg',
-'https://i.pinimg.com/originals/de/71/d6/de71d64ae6174176ab9cd108bf7c7c3c.jpg',
-'https://i.pinimg.com/736x/89/c8/3e/89c83e8620b24ac23ba67afb4f62281f.jpg',
-'https://i.pinimg.com/originals/8a/63/04/8a6304985aa67c8133bf8881256d31be.jpg',
-'https://i.pinimg.com/736x/50/d5/f0/50d5f02d3ecd9ea2044d6d941a4dc1aa.jpg'
+'https://i.pinimg.com/736x/39/9e/ab/399eabc7c6b2fd51a232634874c4c0ed.jpg',
+'https://i.pinimg.com/736x/b3/a9/93/b3a9937266f8a83725d0ff47ea16c2c7.jpg',
+'https://i.pinimg.com/736x/c6/da/18/c6da1822a2b3eb3e642859dcc20db60f.jpg',
+'https://www.animenachrichten.de/wp-content/uploads/2023/08/The-100-Girlfriends-Who-Really-Love-You-Newsbild-August-2023.png',
+'https://i.pinimg.com/736x/ce/b4/b0/ceb4b0612e20bed98b9eb188c7b4bab4.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363263466636910@newsletter", serverMessageId: 100, newsletterName: '『 ✯ Team Comunidad Ian ✯ 』', }, externalAdReply: { showAdAttribution: true, title: packname, body: '🍡 ¡Super Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
-export default handler
+export
