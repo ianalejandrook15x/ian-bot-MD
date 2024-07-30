@@ -7,34 +7,34 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 👑 *Propietario:*
 
 • Ianalejandrook15x
-🌸 *Rol:* Propietario
+🌸 *Rol:* Propietario 👑
 🚩 *Número:* ${creador}
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 ⁖❤️꙰  *Colaboradores:*
 
 • Miguel
-🌸 *Rol:* Developer
+🌸 *Rol:* Colaborador 🐉
 🚩 *Número:* Wa.me/543876631319
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Camila
-🌸 *Rol:* Developer
+🌸 *Rol:* Animadora 🌺
 🚩 *Número:* Wa.me/543876432321
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Bautista
-🌸 *Rol:* Developer
+🌸 *Rol:* Travesti ✔
 🚩 *Número:* Wa.me/543876576152
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Dilan
-🌸 *Rol:* Developer
+🌸 *Rol:* Le gusta la Valentina 🐢
 🚩 *Número:* Wa.me/543876636841
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
 • Bitel
-🌸 *Rol:* Developer
+🌸 *Rol:* Bitel el mas grande 🧸
 🚩 *Número:* Wa.me/51925730477
 ✨️ *GitHub:* https://github.com/ianalejandrook15x`
 await conn.sendFile(m.chat, icons, 'nino.jpg', staff.trim(), fkontak, true, {
