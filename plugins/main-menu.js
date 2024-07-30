@@ -26,7 +26,7 @@ let tags = {
   'mods': 'STAFF IAN 🧸',
   'audio': 'AUDIOS 🌸', 
   'ai': 'AI 🧸',
-  'transformador': 'CONVERTIDORES 🚩',
+  'transformador': 'CONVERTIDORES 🌸',
 }
 
 const defaultMenu = {
