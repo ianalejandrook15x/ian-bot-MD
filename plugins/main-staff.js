@@ -28,6 +28,11 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🚩 *Número:* Wa.me/543876576152
 ✨️ *GitHub:* https://github.com/ianalejandrook15x
 
+• Carlos
+🌸 *Rol:* Colaborador 😎
+🚩 *Número:* Wa.me/543876636841
+✨️ *GitHub:* https://github.com/ianalejandrook15x
+
 • Dilan
 🌸 *Rol:* Le gusta la Valentina 🐢
 🚩 *Número:* Wa.me/543876636841
