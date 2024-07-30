@@ -102,7 +102,7 @@ global.icono = [
 'https://i.pinimg.com/736x/39/9e/ab/399eabc7c6b2fd51a232634874c4c0ed.jpg',
 'https://i.pinimg.com/736x/b3/a9/93/b3a9937266f8a83725d0ff47ea16c2c7.jpg',
 'https://i.pinimg.com/736x/c6/da/18/c6da1822a2b3eb3e642859dcc20db60f.jpg',
-'https://www.animenachrichten.de/wp-content/uploads/2023/08/The-100-Girlfriends-Who-Really-Love-You-Newsbild-August-2023.png',
+'https://i.pinimg.com/736x/39/9e/ab/399eabc7c6b2fd51a232634874c4c0ed.jpg',
 'https://i.pinimg.com/736x/ce/b4/b0/ceb4b0612e20bed98b9eb188c7b4bab4.jpg'
 ].getRandom()
 
