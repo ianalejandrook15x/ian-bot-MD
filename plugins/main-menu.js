@@ -5,27 +5,27 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO 📚',
-  'buscador': 'BUSQUEDAS 🔎',
-  'fun': 'JUEGOS 🎮',
-  'jadibot': 'SUB BOTS 🤖',
-  'rpg': 'RPG 🌠',
-  'rg': 'REGISTRO 📁',
-  'xp': 'EXP 🏷',
-  'sticker': 'STICKERS 🏞',
-  'anime': 'ANIMEA 🍧',
-  'database': 'DATABASE ✨️',
-  'fix': 'FIXMSGESPERA 💭',
-  'grupo': 'GRUPOS 👥',
-  'nable': 'ON / OFF 📴', 
-  'descargas': 'DESCARGAS 📥',
-  'youtube': 'YOUTUBE PLAY 📥',
-  'tools': 'HERRAMIENTAS 🔧',
-  'info': 'INFORMACIÓN 🌺',
+  'main': 'INFO 🌸',
+  'buscador': 'BUSQUEDAS 🧸',
+  'fun': 'JUEGOS 🌸',
+  'jadibot': 'SUB BOTS 🧸',
+  'rpg': 'RPG 🌸',
+  'rg': 'REGISTRO 🧸',
+  'xp': 'EXP 🌸',
+  'sticker': 'STICKERS 🌸',
+  'anime': 'ANIMEA 🧸',
+  'database': 'DATABASE 🌸',
+  'fix': 'FIXMSGESPERA 🧸',
+  'grupo': 'GRUPOS 🌸',
+  'nable': 'ON / OFF 🧸', 
+  'descargas': 'DESCARGAS 🌸',
+  'youtube': 'YOUTUBE PLAY 🧸',
+  'tools': 'HERRAMIENTAS 🌸',
+  'info': 'INFORMACIÓN 🧸',
   'owner': 'CREADOR 👑', 
-  'mods': 'STAFF IAN 🌸',
-  'audio': 'AUDIOS 🔉', 
-  'ai': 'AI 🌹',
+  'mods': 'STAFF IAN 🧸',
+  'audio': 'AUDIOS 🌸', 
+  'ai': 'AI 🧸',
   'transformador': 'CONVERTIDORES 🚩',
 }
 
@@ -40,7 +40,7 @@ const defaultMenu = {
 ││✯ ⚡️ *Exp:* %exp
 ││✯ 🌟 *Estrellas:* %estrellas
 ││✯ 🌺 *Nivel:* %level
-┬│✯ ⚓ *Rango:* %role
+┬│✯ 🧸 *Rango:* %role
 │╰────────────────···
 ╰────────═┅═─────────
 %readmore
