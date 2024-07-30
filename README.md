@@ -1,6 +1,6 @@
 # *Hola Bienvenido al repositorio de Ian-Bot*
 # *Disfruta tu Estadia* 🌸
-![nakanonino](https://github.com/user-attachments/assets/e063f817-6db7-42eb-afe1-14cc57107d20)
+![Eiai](https://github.com/user-attachments/assets/4144a9af-05f4-4e93-8272-b90b92fcd0c2)
 # *este bot se encuentra en desarrollo*
 
 
