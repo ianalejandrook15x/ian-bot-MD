@@ -1,4 +1,3 @@
-
 import { promises } from 'fs'
 import { join } from 'path'
 import fetch from 'node-fetch'
@@ -178,10 +177,10 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://cdn.wa
 
 await m.react('🌺') 
 
-await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null,)
+await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null, rcanal)
 
   } catch (e) {
-    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m,)
+    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
     throw e
   }
 }
