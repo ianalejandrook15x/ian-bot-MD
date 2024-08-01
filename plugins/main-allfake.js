@@ -49,7 +49,7 @@ global.rwait = '🕒'
 global.done = '✅'
 global.error = '✖️'
 
-//Emojis determinado de Ai Yaemori
+//Emojis determinado de Ian
 global.emoji = '🚩'
 global.emoji2 = '🌸'
 global.emoji3 = '✨️'
