@@ -177,10 +177,10 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://cdn.wa
 
 await m.react('🌺') 
 
-await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null, rcanal)
+await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null, icanal)
 
   } catch (e) {
-    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
+    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, icanal, )
     throw e
   }
 }
