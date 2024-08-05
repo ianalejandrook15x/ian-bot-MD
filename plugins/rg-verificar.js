@@ -10,8 +10,8 @@ if (!name) throw '*『✦』No puedes registrarte sin nombre, el nombre es oblig
 if (!age) throw '*『✦』No puedes registrarte sin la edad, la edad es opcional. Inténtelo de nuevo.*'
 if (name.length >= 30) throw '*『✦』El nombre no debe de tener mas de 30 caracteres.*' 
 age = parseInt(age)
-if (age > 999) throw '*『👀』Migue busca Shuggar*'
-if (age < 5) throw '*『🍼』Ven aquí, te adoptare!!*'
+if (age > 999) throw '*『✔』Viejo/a*'
+if (age < 5) throw '*『👀』Ven aquí, te adoptare*'
 user.name = name.trim()
 user.age = age
 user.regTime = + new Date
@@ -22,7 +22,7 @@ global.db.data.users[m.sender].exp += 245
 global.db.data.users[m.sender].joincount += 5
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)        
 m.react('📩') 
-let regbot = `👤 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗢 👤
+let regbot = `☁ 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗢 ☁
 •┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
 「💭」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}
 「✨️」𝗘𝗱𝗮𝗱: ${age} años
@@ -34,7 +34,7 @@ let regbot = `👤 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗢 👤
 • 12 Tokens 💰
 •┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
 ${packname}`
-await conn.sendIan(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
+await conn.sendMini(m.chat, '🍄𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥🍄', textbot, regbot, imagen1, imagen1, channel, m)
 //await m.reply(`${sn}`)        
 }
 handler.help = ['reg']
