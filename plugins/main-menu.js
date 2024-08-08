@@ -34,19 +34,19 @@ const defaultMenu = {
 “ Hola *%name* soy *Ian*, %greeting ”
 
        *INFO - BOT*
-  ✿︎ 💌 *Cliente:* %name
-  ✿︎ ⚡️ *Exp:* %exp
-  ✿︎ 🌟 *Estrellas:* %estrellas
-  ✿︎ 🌺 *Nivel:* %level
-  ✿︎ 🧸 *Rango:* %role
+  ✿︎ *Cliente:* %name
+  ✿︎ *Exp:* %exp
+  ✿︎ *Estrellas:* %estrellas
+  ✿︎ *Nivel:* %level
+  ✿︎ *Rango:* %role
   
 %readmore
        *INFO - USER*
-  ✿︎ 🌸 *Bot:* Ian Bot - MD 
-  ✿︎ 🚩 *Modo* Público
-  ✿︎ 🍕 *Baileys:* Multi Device
-  ✿︎ 🕒 *Tiempo Activo:* %muptime
-  ✿︎ 👤 *Usuarios:* %totalreg 
+  ✿︎ *Bot:* Ian Bot - MD 
+  ✿︎ *Modo* Público
+  ✿︎ *Baileys:* Multi Device
+  ✿︎ *Tiempo Activo:* %muptime
+  ✿︎ *Usuarios:* %totalreg 
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
@@ -170,7 +170,7 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://cdn.wa
 
 // await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲𝗹 𝗕𝗼𝘁...𓏲੭*', m, rcanal)
 
-await m.react('🌺') 
+await m.react('🍄') 
 
 await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null, rcanal)
 
