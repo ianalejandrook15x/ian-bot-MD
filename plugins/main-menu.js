@@ -34,19 +34,19 @@ const defaultMenu = {
 “ Hola *%name* soy *Ian*, %greeting ”
 
        *INFO - BOT*
-  * 💌 *Cliente:* %name
-  * ⚡️ *Exp:* %exp
-  * 🌟 *Estrellas:* %estrellas
-  * 🌺 *Nivel:* %level
-  * 🧸 *Rango:* %role
+  ✿︎ 💌 *Cliente:* %name
+  ✿︎ ⚡️ *Exp:* %exp
+  ✿︎ 🌟 *Estrellas:* %estrellas
+  ✿︎ 🌺 *Nivel:* %level
+  ✿︎ 🧸 *Rango:* %role
   
 %readmore
        *INFO - USER*
-  * 🌸 *Bot:* Ian Bot - MD 
-  * 🚩 *Modo* Público
-  * 🍕 *Baileys:* Multi Device
-  * 🕒 *Tiempo Activo:* %muptime
-  * 👤 *Usuarios:* %totalreg 
+  ✿︎ 🌸 *Bot:* Ian Bot - MD 
+  ✿︎ 🚩 *Modo* Público
+  ✿︎ 🍕 *Baileys:* Multi Device
+  ✿︎ 🕒 *Tiempo Activo:* %muptime
+  ✿︎ 👤 *Usuarios:* %totalreg 
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
