@@ -8,12 +8,12 @@ let pp = await conn.profilePictureUrl(who).catch(_ => 'https://telegra.ph/file/2
 let biografia = await conn.fetchStatus('543876577197' +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
 let biografiaBot = await conn.fetchStatus(`${conn.user.jid.split('@')[0]}` +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
 let bio = biografia.status?.toString() || 'Sin Biografía'
-let biobot = biografiaBot.status?.toString() || 'Sin Biografía'
+let biobot = biografiaBot.status?.toString() || 'Creador de Ian-bot'
 let name = await conn.getName(who)
 
   await sendContactArray(conn, m.chat, [
-     [`${nomorown}`, `👑 Propietario`, `☁️ Ianalejandrook15x`, dev, 'Alejandroxddd91@gmail.com', `🌸 Argentina`, `${global.yt}`, bio],
-[`${conn.user.jid.split('@')[0]}`, `Es Una Bot 🤍`, `${packname}`, `📵 No Hacer Spam`, 'sm.iam1836@gmail.com', `🌸 Argentina`, `https://github.com/Ianalejandrook15x/ianxdd`, biobot]
+     [`${nomorown}`, `👑 Propietario`, `🌸 Ianalejandrook15x`, dev, 'Alejandroxddd91@gmail.com', `🌸 Argentina`, `${global.yt}`, bio],
+[`${conn.user.jid.split('@')[0]}`, `Es Una Bot 🍄`, `${packname}`, `📵 No Hacer Spam`, 'sm.iam1836@gmail.com', `🌸 Argentina`, `https://github.com/Ianalejandrook15x/ianxdd`, biobot]
 ], m)
   //m.reply(`Hola @${m.sender.split(`@`)[0]} este es el contacto de mi creador, no hagas spam!!`)
   } 
