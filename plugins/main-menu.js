@@ -34,27 +34,27 @@ const defaultMenu = {
 “ Hola *%name* soy *Ian*, %greeting ”
 
        *INFO - BOT*
-  𑁍 💌 *Cliente:* %name
-  𑁍 ⚡️ *Exp:* %exp
-  𑁍 🌟 *Estrellas:* %estrellas
-  𑁍 🌺 *Nivel:* %level
-  𑁍 🧸 *Rango:* %role
+  * 💌 *Cliente:* %name
+  * ⚡️ *Exp:* %exp
+  * 🌟 *Estrellas:* %estrellas
+  * 🌺 *Nivel:* %level
+  * 🧸 *Rango:* %role
   
 %readmore
        *INFO - USER*
-  𑁍 🌸 *Bot:* Ian Bot - MD 
-  𑁍 🚩 *Modo* Público
-  𑁍 🍕 *Baileys:* Multi Device
-  𑁍 🕒 *Tiempo Activo:* %muptime
-  𑁍 👤 *Usuarios:* %totalreg 
+  * 🌸 *Bot:* Ian Bot - MD 
+  * 🚩 *Modo* Público
+  * 🍕 *Baileys:* Multi Device
+  * 🕒 *Tiempo Activo:* %muptime
+  * 👤 *Usuarios:* %totalreg 
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-      header: '%category ]\n│',
+      header: '%category ]\n',
   body: '%cmd\n',
-  footer: '│╰────────────────···\n╰────────═┅═─────────\n',
+  footer: '',
   after: `• ${textbot}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
