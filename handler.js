@@ -739,7 +739,7 @@ group: '「🌺」 *Esta funcion solo puede ser ejecutada en grupos.*',
 private: '「🍭」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「👑」 *Este comando solo puede ser usado por admins.*', 
 botAdmin: '「🚩」 *Para usar esta función debo ser admin.*', 
-unreg: '「🌸」 *¡Hey! no estas registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*_❕ Ejemplo_* : */reg Ian.666*',
+unreg: '「🌸」 *Nᴏ ᴇsᴛᴀs ʀᴇɢɪsᴛʀᴀᴅᴏ, ʀᴇɢɪsᴛʀᴇsᴇ ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴀ ғᴜɴᴄɪᴏ́ɴ*\n\n*.𝗿𝗲𝗴 𝗻𝗼𝗺𝗯𝗿𝗲.𝗲𝗱𝗮𝗱*\n\n*❀  Ejemplo* : .𝗿𝗲𝗴 𝗜𝗮𝗻.14',
 restrict: '「💫」 *Esta característica esta desactivada.*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
