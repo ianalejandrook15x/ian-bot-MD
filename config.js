@@ -1,8 +1,9 @@
+
 import {watchFile, unwatchFile} from 'fs';
 import chalk from 'chalk';
 import {fileURLToPath} from 'url';
 import fs from 'fs'; 
-import cheerio from 'cheerio';
+//import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
@@ -14,27 +15,27 @@ global.confirmCode = ''
 
 //• ↳𝑺𝑶𝑳𝑶 𝑫𝑬𝑺𝑨𝑹𝑹𝑶𝑳𝑳𝑨𝑫𝑶𝑹𝑬𝑺 𝑨𝑷𝑹𝑶𝑩𝑨𝑫𝑶𝑺
 global.owner = [
-['543876577197', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 👑', true],
-['543876577197', '𝗢𝘄𝗻𝗲𝗿 👑', true],
-['543876577197']]
-
-//• ↳𝑺𝑶𝑳𝑶 𝑴𝑶𝑫𝑬𝑹𝑨𝑫𝑶𝑹𝑬𝑺!
-global.mods = ['543876577197', '543876639332', '', '543876631319', '543876636841', '543876576152', '51925730477']
+['543876577197', '🍄 IAN BOT', true],
+['543876577197', '👑 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 👑', true],
+['543876639332'],
+['543876639332']]
 
 global.suittag = ['543876577197']
 global.prems = []
+global.mods = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
-global.packname = '⪛✰ 𝐈𝐚𝐧 𝐁𝐨𝐭 - 𝐌𝐃 ✰⪜'
-global.author = 'Iᴀɴᴀʟᴇᴊᴀɴᴅʀᴏᴏᴋ15x 👑'
-global.wm = '✨◌*̥₊ IᴀɴBᴏᴛ-MD ◌❐⚡༉'
-global.titulowm = 'IanBot-MD 🌸'
-global.titulowm2 = 'ianalejandrook15x'
-global.igfg = '𝕀𝕒𝕟𝕒𝕝𝕖𝕛𝕒𝕟𝕕𝕣𝕠𝕠𝕜15𝕩'
-global.botname = 'Iᴀɴ Bᴏᴛ - MD 🚩'
-global.dev = '🌸 Powered By あ Ale_Iᴀɴ あ'
-global.textbot = 'Ian : Ianalejandrook15x 🚩'
-global.vs = '2.0.2'
+global.packname = '⪛𑁍 𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝐌𝐃 𑁍⪜'
+global.author = '𝖮𝖿𝖼.𝖣𝗂𝖾𝗀𝗈 👑'
+global.wm = 'Ian Bot - MD'
+global.titulowm = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗'
+global.titulowm2 = '𝐈𝐚𝐧 𝐁𝐨𝐭 - 𝐌𝐃 🍄'
+global.igfg = '𝙸𝚊𝚗𝙱𝚘𝚝-𝙼𝙳 🌸'
+global.botname = 'Iᴀɴ Bᴏᴛ - MD ☁'
+global.team = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
+global.dev = '🌸 Powered By ɪᴀɴAʟᴇᴊᴀɴᴅʀᴏ シ︎'
+global.textbot = '𝗜𝗮𝗻 𝗯𝗼𝘁 : 𝗜𝗮𝗻𝗮𝗹𝗲𝗷𝗮𝗻𝗱𝗿𝗼𝗼𝗸13 👑'
+global.vs = '2.0.4'
 
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
@@ -42,20 +43,23 @@ global.imagen1 = fs.readFileSync('./Menu.jpg')
 global.imagen2 = fs.readFileSync('./Menu2.jpg')
 global.imagen3 = fs.readFileSync('./Menu3.jpg')
 global.catalogo = fs.readFileSync('./media/catalogo.jpg')
-global.welcome = fs.readFileSync('./media/Welcome.jpg')
+global.welcome = fs.readFileSync('./media/welcome.jpg')
+global.adios = fs.readFileSync('./media/adios.jpg')
 
-//• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 👒
-global.estilo = { key: {  fromMe: false, participant: 0@s.whatsapp.net, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '✨️ 𝗦𝘂𝗽𝗲𝗿 𝗜𝗮𝗻 🌸', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+//• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '✨️ 𝗦𝘂𝗽𝗲𝗿 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 🍟', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.gp1 = 'https://chat.whatsapp.com/GyNAwWzfhzP61XzxzBc/Sa' //Grupo Oficial de Ian
-global.comunidad1 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Comunidad Ian
-global.comunidad2 = 'https://chat.whatsapp.com/CYGCgMh2LefBNhIAVIVhmE' //Comunidad de Infinity-wa
+global.gp1 = 'https://chat.whatsapp.com/KiJY7gZS17aLcP6qaGatFX' //Grupo Oficial De Ian
+global.gp2 = 'https://chat.whatsapp.com/DIvhufT32VqEzQYHPpqB7x' //Grupo 2 de Ian
+global.gp3 = 'https://chat.whatsapp.com/JJGQs5aCsTsAsHbw752fBv' //Grupo 3 de ian
+global.comunidad1 = 'https://chat.whatsapp.com/FJr05BxtRfH6Fsi6voyjRS' //Comunidad Ian
 global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal Oficial
 global.yt = 'https://www.youtube.com/@ianalejandrook14' //Canal De Youtube
-global.md = 'https://github.com/ianalejandrook15x/ianxdd' //Github Oficial
-global.fb = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWkwL' //Facebook Del Propietario
+global.md = 'https://github.com/ianalejandrook15x/ian-bot-MD' //Github Oficial
+global.fb = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' //Facebook Del Propietario
 global.tiktok = 'https://tiktok.com/@ian.ian271' //Cuenta tiktok
+global.correo = 'sm.iam1836@gmail.com'
 
 //• ↳ ◜𝑻𝑰𝑬𝑴𝑷𝑶◞ • 🕒
 global.d = new Date(new Date + 3600000);
@@ -65,26 +69,26 @@ global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', yea
 global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
-//* **********
-global.wm2 = ${dia} ${fecha}\nIan;
-global.nomorown = '543876577197';
+//* ****************************
+global.wm2 = `${dia} ${fecha}\nYaemori`;
+global.nomorown = '573012482597';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
 global.cmenuf = '╰━═┅═━––––––๑\n';
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     ';
-global.dmenut = '❖─┅──┅〈';
-global.dmenub = '┊»';
-global.dmenub2 = '┊';
-global.dmenuf = '╰┅────────┅✦';
+global.dmenut = '*❖─┅──┅〈*';
+global.dmenub = '*┊»*';
+global.dmenub2 = '*┊*';
+global.dmenuf = '*╰┅────────┅✦*';
 global.htjava = '⫹⫺';
-global.htki = '⭑•̩̩͙⊱•••• ☪';
-global.htka = '☪ ••••̩̩͙⊰•⭑';
+global.htki = '*⭑•̩̩͙⊱•••• ☪*';
+global.htka = '*☪ ••••̩̩͙⊰•⭑*';
 global.comienzo = '• • ◕◕════';
 global.fin = '════◕◕ • •';
-global.botdate = ${moment.tz('America/Mexico_City').format('DD/MM/YY')};
-global.bottime = ${moment.tz('America/Mexico_City').format('HH:mm:ss')};
-global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': Hmm, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.jpg')}}};
+global.botdate = `${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
+global.bottime = `${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
+global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.jpg')}}};
 global.multiplier = 99;
 global.flaaa = [
   'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
@@ -93,7 +97,7 @@ global.flaaa = [
   'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
   'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=',
 ];
-//* ********
+//* ************************
 
 //• ↳ ◜𝑨𝑷𝑰𝑺 𝑭𝑼𝑵𝑪𝑰𝑶𝑵◞ 👑
 global.openai_org_id = 'org-3';
@@ -128,10 +132,10 @@ global.APIs = {
   nekobot: 'https://nekobot.xyz'
 },
 global.APIKeys = {
-  'https://api.xteam.xyz': ${keysxteam},
+  'https://api.xteam.xyz': `${keysxteam}`,
   'https://api.lolhuman.xyz': 'GataDios',
-  'https://api.neoxr.my.id': ${keysneoxr},
-  'https://api.zahwazein.xyz': ${keysxxx},
+  'https://api.neoxr.my.id': `${keysneoxr}`,
+  'https://api.zahwazein.xyz': `${keysxxx}`,
   'https://api-fgmods.ddns.net': 'fg-dylux',
   'https://api.botcahx.biz.id': 'Admin',
   'https://api.ibeng.tech/docs': 'tamvan',
@@ -140,8 +144,8 @@ global.APIKeys = {
   'https://api.xyroinee.xyz': 'uwgflzFEh6'
 };
 
-/* *********/
-global.cheerio = cheerio;
+/** ************************/
+//global.cheerio = cheerio;
 global.fs = fs;
 global.fetch = fetch;
 global.axios = axios;
@@ -220,7 +224,7 @@ global.rpg = {
       kambing: '🐐 Cabra',
       kerbau: '🐃 Búfalo',
       lion: '🦁 León',
-      money: '👾 LuffyCoins',
+      money: '👾 MiniCoins',
       monyet: '🐒 Mono',
       panda: '🐼 Panda',
       snake: '🐍 Serpiente',
@@ -491,5 +495,5 @@ const file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
   unwatchFile(file);
   console.log(chalk.redBright('Update \'config.js\''));
-  import(${file}?update=${Date.now()});
+  import(`${file}?update=${Date.now()}`);
 });
