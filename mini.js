@@ -46,12 +46,12 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
 global.timestamp = { start: new Date }
 
-const _dirname = global._dirname(import.meta.url);
+const __dirname = global.__dirname(import.meta.url);
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
-global.prefix = new RegExp('^[' + (opts['prefix'] || '/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@').replace(/[|\\{}()[\]^$+.\-\^]/g, '\\$&') + ']');
+global.prefix = new RegExp('^[/.#!]');
 
-global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(${opts._[0] ? opts._[0] + '_' : ''}database.json));
+global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`));
 
 global.DATABASE = global.db; 
 global.loadDatabase = async function loadDatabase() {
@@ -79,13 +79,6 @@ global.db.chain = chain(global.db.data);
 };
 loadDatabase();
 
-// Inicialización de conexiones globales
-/*if (global.conns instanceof Array) {
-console.log('🚩 Conexiones ya inicializadas...');
-} else {
-global.conns = [];
-}*/
-
 /* ------------------------------------------------*/
 
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
@@ -112,8 +105,8 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = IanSession
-global.authFileJB = IanJadiBot
+global.authFile = `MiniSession`
+global.authFileJB = `MiniJadiBot`
 
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { }
@@ -146,12 +139,12 @@ let opcion
 if (methodCodeQR) {
 opcion = '1'
 }
-if (!methodCodeQR && !methodCode && !fs.existsSync(./${authFile}/creds.json)) {
+if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
 opcion = await question(colores('Seleccione una opción:\n') + opcionQR('1. Con código QR\n') + opcionTexto('2. Con código de texto de 8 dígitos\n--> '))
 if (!/^[1-2]$/.test(opcion)) {
-console.log(chalk.bold.redBright(🔴  NO SE PERMITE NÚMEROS QUE NO SEAN ${chalk.bold.greenBright("1")} O ${chalk.bold.greenBright("2")}, TAMPOCO LETRAS O SÍMBOLOS ESPECIALES.\n${chalk.bold.yellowBright("CONSEJO: COPIE EL NÚMERO DE LA OPCIÓN Y PÉGUELO EN LA CONSOLA.")}))
-}} while (opcion !== '1' && opcion !== '2' || fs.existsSync(./${authFile}/creds.json))
+console.log(chalk.bold.redBright(`🔴  NO SE PERMITE NÚMEROS QUE NO SEAN ${chalk.bold.greenBright("1")} O ${chalk.bold.greenBright("2")}, TAMPOCO LETRAS O SÍMBOLOS ESPECIALES.\n${chalk.bold.yellowBright("CONSEJO: COPIE EL NÚMERO DE LA OPCIÓN Y PÉGUELO EN LA CONSOLA.")}`))
+}} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
 const filterStrings = [
@@ -171,7 +164,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['Ian Bot - MD', 'Edge', '2.0.0'] : methodCodeQR ? ['Ian Bot - MD', 'Edge', '2.0.0'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
+browser: opcion == '1' ? ['Ai Yaemori', 'Edge', '2.0.0'] : methodCodeQR ? ['Ai Yaemori', 'Edge', '2.0.0'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -191,7 +184,7 @@ version,
 }
 
 global.conn = makeWASocket(connectionOptions)
-if (!fs.existsSync(./${authFile}/creds.json)) {
+if (!fs.existsSync(`./${authFile}/creds.json`)) {
 if (opcion === '2' || methodCode) {
 opcion = '2'
 if (!conn.authState.creds.registered) {
@@ -200,7 +193,7 @@ if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
 } else {
 do {
-phoneNumber = await question(chalk.bgBlack(chalk.bold.greenBright(🟣  Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright("CONSEJO: Copie el número de WhatsApp y péguelo en la consola.")}\n${chalk.bold.yellowBright("Ejemplo: +573218138672")}\n${chalk.bold.magentaBright('---> ')})))
+phoneNumber = await question(chalk.bgBlack(chalk.bold.greenBright(`🟣  Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright("CONSEJO: Copie el número de WhatsApp y péguelo en la consola.")}\n${chalk.bold.yellowBright("Ejemplo: +573218138672")}\n${chalk.bold.magentaBright('---> ')}`)))
 phoneNumber = phoneNumber.replace(/\D/g,'')
 } while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
 rl.close()
@@ -209,7 +202,7 @@ addNumber = phoneNumber.replace(/\D/g, '')
 setTimeout(async () => {
 let codeBot = await conn.requestPairingCode(addNumber)
 codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
-console.log(chalk.black(chalk.bgGreen(👑 CÓDIGO DE VINCULACIÓN 👑)), chalk.bold.white(chalk.white(codeBot)))
+console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.bold.white(chalk.white(codeBot)))
 }, 2000)
 }}}
 }
@@ -242,7 +235,7 @@ global.timestamp.connect = new Date
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1' || methodCodeQR) {
-console.log(chalk.bold.yellow(\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS))}
+console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`))}
 }
 if (connection == 'open') {
 await conn.groupAcceptInvite('Em1J2VaglHc1fe26YtBDCS')
@@ -250,71 +243,29 @@ console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺�
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
 if (reason === DisconnectReason.badSession) {
-console.log(chalk.bold.cyanBright(\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️))
+console.log(chalk.bold.cyanBright(`\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️`))
 } else if (reason === DisconnectReason.connectionClosed) {
-console.log(chalk.bold.magentaBright(\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹\n┆ ⚠️ CONEXION CERRADA, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹))
+console.log(chalk.bold.magentaBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹\n┆ ⚠️ CONEXION CERRADA, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹`))
 await global.reloadHandler(true).catch(console.error)
 } else if (reason === DisconnectReason.connectionLost) {
-console.log(chalk.bold.blueBright(\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂\n┆ ⚠️ CONEXIÓN PERDIDA CON EL SERVIDOR, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂))
+console.log(chalk.bold.blueBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂\n┆ ⚠️ CONEXIÓN PERDIDA CON EL SERVIDOR, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂`))
 await global.reloadHandler(true).catch(console.error)
 } else if (reason === DisconnectReason.connectionReplaced) {
-console.log(chalk.bold.yellowBright(\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗\n┆ ⚠️ CONEXIÓN REEMPLAZADA, SE HA ABIERTO OTRA NUEVA SESION, POR FAVOR, CIERRA LA SESIÓN ACTUAL PRIMERO.\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗))
+console.log(chalk.bold.yellowBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗\n┆ ⚠️ CONEXIÓN REEMPLAZADA, SE HA ABIERTO OTRA NUEVA SESION, POR FAVOR, CIERRA LA SESIÓN ACTUAL PRIMERO.\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗`))
 } else if (reason === DisconnectReason.loggedOut) {
-console.log(chalk.bold.redBright(\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️))
+console.log(chalk.bold.redBright(`\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️`))
 await global.reloadHandler(true).catch(console.error)
 } else if (reason === DisconnectReason.restartRequired) {
-console.log(chalk.bold.cyanBright(\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓\n┆ ❇️ CONECTANDO AL SERVIDOR...\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓))
+console.log(chalk.bold.cyanBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓\n┆ ❇️ CONECTANDO AL SERVIDOR...\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓`))
 await global.reloadHandler(true).catch(console.error)
 } else if (reason === DisconnectReason.timedOut) {
-console.log(chalk.bold.yellowBright(\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸\n┆ ⌛ TIEMPO DE CONEXIÓN AGOTADO, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸))
+console.log(chalk.bold.yellowBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸\n┆ ⌛ TIEMPO DE CONEXIÓN AGOTADO, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸`))
 await global.reloadHandler(true).catch(console.error) //process.send('reset')
 } else {
-console.log(chalk.bold.redBright(\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA: ${reason || 'No encontrado'} >> ${connection || 'No encontrado'}))
+console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA: ${reason || 'No encontrado'} >> ${connection || 'No encontrado'}`))
 }}
 }
 process.on('uncaughtException', console.error)
-
-/* ------------------------------------------------*/
-/* Código reconexión de sub-bots fases beta */
-/* Echo por: https://github.com/elrebelde21 */
-
-/*async function connectSubBots() {
-const subBotDirectory = './IanJadiBot';
-if (!existsSync(subBotDirectory)) {
-console.log('🚩 IanBot no tiene Sub-Bots vinculados.');
-return;
-}
-
-const subBotFolders = readdirSync(subBotDirectory).filter(file => 
-statSync(join(subBotDirectory, file)).isDirectory()
-);
-
-const botPromises = subBotFolders.map(async folder => {
-const authFile = join(subBotDirectory, folder);
-if (existsSync(join(authFile, 'creds.json'))) {
-return await connectionUpdate(authFile);
-}
-});
-
-const bots = await Promise.all(botPromises);
-global.conns = bots.filter(Boolean);
-console.log(chalk.bold.greenBright(🍟 Todos los Sub-Bots se conectaron con éxito.))
-}
-
-(async () => {
-global.conns = [];
-
-const mainBotAuthFile = 'IanSession';
-try {
-const mainBot = await connectionUpdate(mainBotAuthFile);
-global.conns.push(mainBot);
-console.log(chalk.bold.greenBright(🚩 IanBot conectado correctamente.))
-
-await connectSubBots();
-} catch (error) {
-console.error(chalk.bold.cyanBright(`🍭 Error al iniciar IanBot: `, error))
-}
-})();*/
 
 /* ------------------------------------------------*/
 
@@ -322,7 +273,7 @@ let isInit = true
 let handler = await import('./handler.js')
 global.reloadHandler = async function(restatConn) {
 try {
-const Handler = await import(./handler.js?update=${Date.now()}).catch(console.error)
+const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
 if (Object.keys(Handler || {}).length) handler = Handler
 } catch (e) {
 console.error(e)
@@ -360,7 +311,7 @@ isInit = false
 return true
 }
 
-const pluginFolder = global._dirname(join(_dirname, './plugins/index'));
+const pluginFolder = global.__dirname(join(__dirname, './plugins/index'));
 const pluginFilter = (filename) => /\.js$/.test(filename);
 global.plugins = {};
 async function filesInit() {
@@ -379,23 +330,23 @@ global.reload = async (_ev, filename) => {
 if (pluginFilter(filename)) {
 const dir = global.__filename(join(pluginFolder, filename), true)
 if (filename in global.plugins) {
-if (existsSync(dir)) conn.logger.info(Se acaba de actualizar el plugin: '${filename}')
+if (existsSync(dir)) conn.logger.info(`Se acaba de actualizar el plugin: '${filename}'`)
 else {
-conn.logger.warn(Se acaba de eliminar el plugin: '${filename}')
+conn.logger.warn(`Se acaba de eliminar el plugin: '${filename}'`)
 return delete global.plugins[filename]
 }
-} else conn.logger.info(Nuevo plugin: '${filename}')
+} else conn.logger.info(`Nuevo plugin: '${filename}'`)
 const err = syntaxerror(readFileSync(dir), filename, {
 sourceType: 'module',
 allowAwaitOutsideFunction: true,
 });
-if (err) conn.logger.error(Error de sintaxis al cargar '${filename}'\n${format(err)})
+if (err) conn.logger.error(`Error de sintaxis al cargar '${filename}'\n${format(err)}`)
 else {
 try {
-const module = (await import(${global.__filename(dir)}?update=${Date.now()}))
+const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
 global.plugins[filename] = module.default || module;
 } catch (e) {
-conn.logger.error(Error require plugin '${filename}\n${format(e)}')
+conn.logger.error(`Error require plugin '${filename}\n${format(e)}'`)
 } finally {
 global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
 }}}};
@@ -437,41 +388,41 @@ unlinkSync(filePath)})
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync(./${authFile})
+let directorio = readdirSync(`./${authFile}`)
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(./${authFile}/${files})
+unlinkSync(`./${authFile}/${files}`)
 })
 } 
 
 function purgeSessionSB() {
 try {
-const listaDirectorios = readdirSync(./${authFileJB}/);
+const listaDirectorios = readdirSync(`./${authFileJB}/`);
 let SBprekey = [];
 listaDirectorios.forEach(directorio => {
-if (statSync(./${authFileJB}/${directorio}).isDirectory()) {
-const DSBPreKeys = readdirSync(./${authFileJB}/${directorio}).filter(fileInDir => {
+if (statSync(`./${authFileJB}/${directorio}`).isDirectory()) {
+const DSBPreKeys = readdirSync(`./${authFileJB}/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys];
 DSBPreKeys.forEach(fileInDir => {
 if (fileInDir !== 'creds.json') {
-unlinkSync(./${authFileJB}/${directorio}/${fileInDir})
+unlinkSync(`./${authFileJB}/${directorio}/${fileInDir}`)
 }})
 }})
 if (SBprekey.length === 0) {
-console.log(chalk.bold.green(\n╭» 🟡 IanJadiBot 🟡\n│→ NADA POR ELIMINAR \n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))
+console.log(chalk.bold.green(`\n╭» 🟡 IanJadiBot 🟡\n│→ NADA POR ELIMINAR \n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))
 } else {
-console.log(chalk.bold.cyanBright(\n╭» ⚪ IanJadiBot ⚪\n│→ ARCHIVOS NO ESENCIALES ELIMINADOS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))
+console.log(chalk.bold.cyanBright(`\n╭» ⚪ IanJadiBot ⚪\n│→ ARCHIVOS NO ESENCIALES ELIMINADOS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))
 }} catch (err) {
-console.log(chalk.bold.red(\n╭» 🔴 IanJadiBot 🔴\n│→ OCURRIÓ UN ERROR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️\n + err))
+console.log(chalk.bold.red(`\n╭» 🔴 IanJadiBot 🔴\n│→ OCURRIÓ UN ERROR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️\n` + err))
 }}
 
 function purgeOldFiles() {
-const directories = [./${authFile}/, ./${authFileJB}/]
+const directories = [`./${authFile}/`, `./${authFileJB}/`]
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
 if (err) throw err
@@ -480,9 +431,9 @@ if (file !== 'creds.json') {
 const filePath = path.join(dir, file);
 unlinkSync(filePath, err => {
 if (err) {
-console.log(chalk.bold.red(\n╭» 🔴 ARCHIVO 🔴\n│→ ${file} NO SE LOGRÓ BORRAR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️❌\n + err))
+console.log(chalk.bold.red(`\n╭» 🔴 ARCHIVO 🔴\n│→ ${file} NO SE LOGRÓ BORRAR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️❌\n` + err))
 } else {
-console.log(chalk.bold.green(\n╭» 🟣 ARCHIVO 🟣\n│→ ${file} BORRADO CON ÉXITO\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))
+console.log(chalk.bold.green(`\n╭» 🟣 ARCHIVO 🟣\n│→ ${file} BORRADO CON ÉXITO\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))
 } }) }
 }) }) }) }
 
@@ -499,12 +450,12 @@ originalConsoleMethod.apply(console, arguments)
 setInterval(async () => {
 if (stopped === 'close' || !conn || !conn.user) return
 await clearTmp()
-console.log(chalk.bold.cyanBright(\n╭» 🟢 MULTIMEDIA 🟢\n│→ ARCHIVOS DE LA CARPETA TMP ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))}, 1000 * 60 * 4) // 4 min 
+console.log(chalk.bold.cyanBright(`\n╭» 🟢 MULTIMEDIA 🟢\n│→ ARCHIVOS DE LA CARPETA TMP ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))}, 1000 * 60 * 4) // 4 min 
 
 //setInterval(async () => {
 //if (stopped === 'close' || !conn || !conn.user) return
 //await purgeSession()
-//console.log(chalk.bold.cyanBright(\n╭» 🔵 ${global.authFile} 🔵\n│→ SESIONES NO ESENCIALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))}, 1000 * 60 * 10) // 10 min
+//console.log(chalk.bold.cyanBright(`\n╭» 🔵 ${global.authFile} 🔵\n│→ SESIONES NO ESENCIALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))}, 1000 * 60 * 10) // 10 min
 
 //setInterval(async () => {
 //if (stopped === 'close' || !conn || !conn.user) return
@@ -513,13 +464,13 @@ console.log(chalk.bold.cyanBright(\n╭» 🟢 MULTIMEDIA 🟢\n│→ ARCHIVOS 
 setInterval(async () => {
 if (stopped === 'close' || !conn || !conn.user) return
 await purgeOldFiles()
-console.log(chalk.bold.cyanBright(\n╭» 🟠 ARCHIVOS 🟠\n│→ ARCHIVOS RESIDUALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️))}, 1000 * 60 * 10)
+console.log(chalk.bold.cyanBright(`\n╭» 🟠 ARCHIVOS 🟠\n│→ ARCHIVOS RESIDUALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`))}, 1000 * 60 * 10)
 
-_quickTest().then(() => conn.logger.info(chalk.bold(🚩  H E C H O\n.trim()))).catch(console.error)
+_quickTest().then(() => conn.logger.info(chalk.bold(`🚩  H E C H O\n`.trim()))).catch(console.error)
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
 unwatchFile(file)
 console.log(chalk.bold.greenBright("SE ACTUALIZÓ 'main.js' CON ÉXITO".trim()))
-import(${file}?update=${Date.now()})
+import(`${file}?update=${Date.now()}`)
 })
