@@ -1,4 +1,3 @@
-
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js';
 import './plugins/main-allfake.js'
@@ -50,7 +49,7 @@ global.timestamp = { start: new Date }
 const __dirname = global.__dirname(import.meta.url);
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
-global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@').replace(/[|\\{}()[\]^$+*.\-\^]/g, '\\$&') + ']');
+global.prefix = new RegExp('^[/.#!]');
 
 global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`));
 
@@ -80,13 +79,6 @@ global.db.chain = chain(global.db.data);
 };
 loadDatabase();
 
-// Inicialización de conexiones globales
-/*if (global.conns instanceof Array) {
-console.log('🚩 Conexiones ya inicializadas...');
-} else {
-global.conns = [];
-}*/
-
 /* ------------------------------------------------*/
 
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
@@ -113,8 +105,8 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `IanSession`
-global.authFileJB = `IanJadiBot`
+global.authFile = `MiniSession`
+global.authFileJB = `MiniJadiBot`
 
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { }
@@ -172,7 +164,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['Ian Bot - MD', 'Edge', '2.0.0'] : methodCodeQR ? ['Ian Bot - MD', 'Edge', '2.0.0'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
+browser: opcion == '1' ? ['Ai Yaemori', 'Edge', '2.0.0'] : methodCodeQR ? ['Ai Yaemori', 'Edge', '2.0.0'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -274,48 +266,6 @@ console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA:
 }}
 }
 process.on('uncaughtException', console.error)
-
-/* ------------------------------------------------*/
-/* Código reconexión de sub-bots fases beta */
-/* Echo por: https://github.com/elrebelde21 */
-
-/*async function connectSubBots() {
-const subBotDirectory = './IanJadiBot';
-if (!existsSync(subBotDirectory)) {
-console.log('🚩 IanBot no tiene Sub-Bots vinculados.');
-return;
-}
-
-const subBotFolders = readdirSync(subBotDirectory).filter(file => 
-statSync(join(subBotDirectory, file)).isDirectory()
-);
-
-const botPromises = subBotFolders.map(async folder => {
-const authFile = join(subBotDirectory, folder);
-if (existsSync(join(authFile, 'creds.json'))) {
-return await connectionUpdate(authFile);
-}
-});
-
-const bots = await Promise.all(botPromises);
-global.conns = bots.filter(Boolean);
-console.log(chalk.bold.greenBright(`🍟 Todos los Sub-Bots se conectaron con éxito.`))
-}
-
-(async () => {
-global.conns = [];
-
-const mainBotAuthFile = 'IanSession';
-try {
-const mainBot = await connectionUpdate(mainBotAuthFile);
-global.conns.push(mainBot);
-console.log(chalk.bold.greenBright(`🚩 IanBot conectado correctamente.`))
-
-await connectSubBots();
-} catch (error) {
-console.error(chalk.bold.cyanBright(`🍭 Error al iniciar IanBot: `, error))
-}
-})();*/
 
 /* ------------------------------------------------*/
 
