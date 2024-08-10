@@ -18,12 +18,12 @@ font: 'block',
 align: 'center',
 colors: ['white']
 });
-say(`Multi Device`, {
+say(Multi Device, {
 font: 'chrome',
 align: 'center',
 colors: ['red']
 });
-say(`Developed By • Ian`, {
+say(Developed By • Ian, {
 font: 'console',
 align: 'center',
 colors: ['yellow']
