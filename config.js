@@ -1,4 +1,3 @@
-
 import {watchFile, unwatchFile} from 'fs';
 import chalk from 'chalk';
 import {fileURLToPath} from 'url';
@@ -15,27 +14,27 @@ global.confirmCode = ''
 
 //• ↳𝑺𝑶𝑳𝑶 𝑫𝑬𝑺𝑨𝑹𝑹𝑶𝑳𝑳𝑨𝑫𝑶𝑹𝑬𝑺 𝑨𝑷𝑹𝑶𝑩𝑨𝑫𝑶𝑺
 global.owner = [
-['543876577197', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 👑', true],
-['543876577197', '𝗢𝘄𝗻𝗲𝗿 👑', true],
-['5438765771971']]
-
-//• ↳𝑺𝑶𝑳𝑶 𝑴𝑶𝑫𝑬𝑹𝑨𝑫𝑶𝑹𝑬𝑺!
-global.mods = ['543876577197', '543876639332', '', '543876631319', '543876636841', '543876576152', '51925730477']
+['543876577197', '☁ 𝗜𝗔𝗡 𝗕𝗢𝗧', true],
+['573876577197', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 👑', true],
+['543876639332'],
+['573027866596']]
 
 global.suittag = ['543876577197']
 global.prems = []
+global.mods = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
-global.packname = '⪛✰ 𝐈𝐚𝐧 𝐁𝐨𝐭 - 𝐌𝐃 ✰⪜'
-global.author = 'Iᴀɴᴀʟᴇᴊᴀɴᴅʀᴏᴏᴋ15x 👑'
-global.wm = '✨◌*̥₊ IᴀɴBᴏᴛ-MD ◌❐⚡༉'
-global.titulowm = 'IanBot-MD 🌸'
-global.titulowm2 = 'ianalejandrook15x'
-global.igfg = '𝕀𝕒𝕟𝕒𝕝𝕖𝕛𝕒𝕟𝕕𝕣𝕠𝕠𝕜15𝕩'
-global.botname = 'Iᴀɴ Bᴏᴛ - MD 🚩'
-global.dev = '🌸 Powered By あ Ale_Iᴀɴ あ'
-global.textbot = 'Ian : Ianalejandrook15x 🚩'
-global.vs = '2.0.2'
+global.packname = '⪛✰ BOT IAN - 𝐌𝐃 ✰⪜'
+global.author = 'ianalejandrook15x 👑'
+global.wm = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗'
+global.titulowm = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗 🌸'
+global.titulowm2 = 'Ian Bot - MD ☁'
+global.igfg = 'IanBot-MD 🍄'
+global.botname = 'Iᴀɴ Bᴏᴛ - MD 🧸'
+global.team = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
+global.dev = '🍂 Powered By Iᴀɴ_Aʟᴇᴊᴀɴᴅʀᴏ あ'
+global.textbot = '𝗜𝗮𝗻𝗕𝗼𝘁 : 𝗜𝗮𝗻𝗮𝗹𝗲𝗷𝗮𝗻𝗱𝗿𝗼𝗼𝗸15𝘅 ✨'
+global.vs = '2.0.4'
 
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
@@ -43,20 +42,23 @@ global.imagen1 = fs.readFileSync('./Menu.jpg')
 global.imagen2 = fs.readFileSync('./Menu2.jpg')
 global.imagen3 = fs.readFileSync('./Menu3.jpg')
 global.catalogo = fs.readFileSync('./media/catalogo.jpg')
-global.welcome = fs.readFileSync('./media/Welcome.jpg')
+global.welcome = fs.readFileSync('./media/welcome.jpg')
+global.adios = fs.readFileSync('./media/adios.jpg')
 
-//• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 👒
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '✨️ 𝗦𝘂𝗽𝗲𝗿 𝗜𝗮𝗻 🌸', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+//• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "543876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '✨️ 𝗜𝗮𝗻 🌸', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.gp1 = 'https://chat.whatsapp.com/GyNAwWzfhzP61XzxzBc/Sa' //Grupo Oficial de Ian
-global.comunidad1 = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Comunidad Ian
-global.comunidad2 = 'https://chat.whatsapp.com/CYGCgMh2LefBNhIAVIVhmE' //Comunidad de Infinity-wa
+global.gp1 = 'https://chat.whatsapp.com/DIvhufT32VqEzQYHPpqB7x' //Grupo Oficial De Ian
+global.gp2 = 'https://chat.whatsapp.com/JJGQs5aCsTsAsHbw752fBv' //Grupo Amantes de Musica
+global.gp3 = 'https://chat.whatsapp.com/KiJY7gZS17aLcP6qaGatFX' //Grupo Ian-MoDe
+global.comunidad1 = 'https://chat.whatsapp.com/FJr05BxtRfH6Fsi6voyjRS' //Comunidad Ian
 global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u' //Canal Oficial
 global.yt = 'https://www.youtube.com/@ianalejandrook14' //Canal De Youtube
-global.md = 'https://github.com/ianalejandrook15x/ianxdd' //Github Oficial
-global.fb = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWkwL' //Facebook Del Propietario
+global.md = 'https://github.com/ianalejandrook15x/ian-bot-MD' //Github Oficial
+global.fb = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' //Facebook Del Propietario
 global.tiktok = 'https://tiktok.com/@ian.ian271' //Cuenta tiktok
+global.correo = 'sm.iam1836@gmail.com'
 
 //• ↳ ◜𝑻𝑰𝑬𝑴𝑷𝑶◞ • 🕒
 global.d = new Date(new Date + 3600000);
@@ -67,8 +69,8 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `${dia} ${fecha}\nIan`;
-global.nomorown = '543876577197';
+global.wm2 = `${dia} ${fecha}\nYaemori`;
+global.nomorown = '573012482597';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
@@ -221,7 +223,7 @@ global.rpg = {
       kambing: '🐐 Cabra',
       kerbau: '🐃 Búfalo',
       lion: '🦁 León',
-      money: '👾 LuffyCoins',
+      money: '👾 MiniCoins',
       monyet: '🐒 Mono',
       panda: '🐼 Panda',
       snake: '🐍 Serpiente',
