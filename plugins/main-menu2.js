@@ -26,7 +26,6 @@ const document = doc[Math.floor(Math.random() * doc.length)];
  const str = `*☁ M E N U  - A U D I O S ☁*
 
 *NO ES NECESARIO USAR PREFIJO EN AUDIOS*
-*CREDITOS A GATA_BOT 🏵*
 ∘ _Noche de paz_
 ∘ _Buenos dias_
 ∘ _Audio hentai_
