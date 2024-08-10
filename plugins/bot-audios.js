@@ -318,11 +318,6 @@ let vn = 'https://qu.ax/GSUY.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
 this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}
 
-if (chat.audios && m.text.match(/(hola|ola|hi|hello)/gi)) {    
-let vn = 'https://qu.ax/eGdW.mp3'
-this.sendPresenceUpdate('recording', m.chat)   
-this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}
-
 if (chat.audios && m.text.match(/(Homero chino|homero chino|Omero chino|omero chino|Homero Chino)/gi)) {    
 let vn = 'https://qu.ax/ebe.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
