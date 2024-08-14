@@ -102,12 +102,12 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://i.pinimg.com/736x/39/9e/ab/399eabc7c6b2fd51a232634874c4c0ed.jpg',
-'https://i.pinimg.com/736x/0f/40/02/0f4002892a5c8f1b5105a89b56e30619.jpg',
-'https://i.pinimg.com/736x/39/9e/ab/399eabc7c6b2fd51a232634874c4c0ed.jpg',
-'https://i.pinimg.com/736x/b1/d2/6a/b1d26ac13f38db922374de81706b9769.jpg',
-'https://i.pinimg.com/736x/7b/39/00/7b390000c59a03e4199f8209150cec65.jpg',
-'https://i.pinimg.com/736x/81/20/25/8120253581cf922f381ed099f55b8046.jpg'
+'https://telegra.ph/file/976d6293beca684cac3ab.jpg',
+'https://telegra.ph/file/aacfe7c17bac5c24e9846.jpg',
+'https://telegra.ph/file/94be9ccbb582f145bcdcf.jpg',
+'https://telegra.ph/file/ed55357e3dbb2fe540fa9.jpg',
+'https://telegra.ph/file/af9b07e9dfd3c88c7c7cf.jpg',
+'https://telegra.ph/file/a2a3041d7fd31df231ab0.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363318758721861@newsletter", serverMessageId: 100, newsletterName: '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』', }, externalAdReply: { showAdAttribution: true, title: packname, body: '🌸 ¡Super Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
