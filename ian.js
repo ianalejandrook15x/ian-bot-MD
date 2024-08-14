@@ -105,8 +105,8 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `MiniSession`
-global.authFileJB = `MiniJadiBot`
+global.authFile = `IanSession`
+global.authFileJB = `IanJadiBot`
 
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { }
