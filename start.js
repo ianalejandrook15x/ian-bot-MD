@@ -78,7 +78,7 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 
-global.authFile = `IanSession`
+global.authFile = `MiniSession`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -88,19 +88,18 @@ let phoneNumber = global.botnumber
 const methodCodeQR = process.argv.includes("qr")
 const methodCode = !!phoneNumber || process.argv.includes("code")
 const MethodMobile = process.argv.includes("mobile")
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
-const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
-
 const colores = chalk.bgMagenta.white
 const opcionQR = chalk.bold.green
 const opcionTexto = chalk.bold.cyan
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
+
 let opcion
 if (methodCodeQR) {
 opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
-let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
 opcion = await question(colores('Seleccione una opción:\n') + opcionQR('1. Con código QR\n') + opcionTexto('2. Con código de texto de 8 dígitos\n--> '))
 
 if (!/^[1-2]$/.test(opcion)) {
@@ -108,24 +107,13 @@ console.log('Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-const filterStrings = [
-"Q2xvc2luZyBzdGFsZSBvcGVu", // "Closing stable open"
-"Q2xvc2luZyBvcGVuIHNlc3Npb24=", // "Closing open session"
-"RmFpbGVkIHRvIGRlY3J5cHQ=", // "Failed to decrypt"
-"U2Vzc2lvbiBlcnJvcg==", // "Session error"
-"RXJyb3I6IEJhZCBNQUM=", // "Error: Bad MAC" 
-"RGVjcnlwdGVkIG1lc3NhZ2U=" // "Decrypted message" 
-]
-
 console.info = () => {} 
 console.debug = () => {} 
-['log', 'warn', 'error'].forEach(methodName => redefineConsoleMethod(methodName, filterStrings))
- 
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['Ian Bot', 'Safari', '2.0.0'] : methodCodeQR ? ['Bot Ian', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
+browser: opcion == '1' ? ['Ian bot', 'Safari', '2.0.0'] : methodCodeQR ? ['Bot Ian', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -156,17 +144,17 @@ let numeroTelefono
 if (!!phoneNumber) {
 numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 543876577197\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 543876639332\n")))
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 543876577197\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 543876639332\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 543876577197.\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672.\n")))
 }}
 rl.close()  
 } 
@@ -174,21 +162,21 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            //console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
-
-            console.log(chalk.black(chalk.bgGreen(`🌸 CÓDIGO DE VINCULACIÓN 🌸`)), chalk.black(chalk.white(codigo)))
+            //console.log(chalk.yellow('🧊 introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
 
 conn.isInit = false;
 conn.well = false;
+conn.logger.info(`🔵  H E C H O\n`)
 
 if (!opts['test']) {
   if (global.db) {
     setInterval(async () => {
       if (global.db.data) await global.db.write();
-      if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'serbot'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])));
+      if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'IanJadiBot'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])));
     }, 30 * 1000);
   }
 }
@@ -270,43 +258,37 @@ async function connectionUpdate(update) {
   if (global.db.data == null) loadDatabase();
 if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1' || methodCodeQR) {
-    console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`));
- }}
-  if (connection == 'open') {
+    console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`))}
+}
+   if (connection == 'open') {
     await conn.groupAcceptInvite('Em1J2VaglHc1fe26YtBDCS')
-    console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'));
-   }
-let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
-if (reason == 405) {
-await fs.unlinkSync("./IanSession/" + "creds.json")
-console.log(chalk.bold.redBright(`Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
-process.send('reset')}
+      console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'));
+  }
+let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
-    if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
-    } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`Conexión cerrada, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`Conexión perdida con el servidor, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`)
-    } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
-    } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`Reinicio necesario, reinicie el servidor si presenta algún problema.`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`Tiempo de conexión agotado, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else {
-        conn.logger.warn(`Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`)
-        await global.reloadHandler(true).catch(console.error)
-    }
+if (reason === DisconnectReason.badSession) {
+console.log(chalk.bold.cyanBright(`\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️`))
+} else if (reason === DisconnectReason.connectionClosed) {
+console.log(chalk.bold.magentaBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹\n┆ ⚠️ CONEXION CERRADA, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☹`))
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.connectionLost) {
+console.log(chalk.bold.blueBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂\n┆ ⚠️ CONEXIÓN PERDIDA CON EL SERVIDOR, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ☂`))
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.connectionReplaced) {
+console.log(chalk.bold.yellowBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗\n┆ ⚠️ CONEXIÓN REEMPLAZADA, SE HA ABIERTO OTRA NUEVA SESION, POR FAVOR, CIERRA LA SESIÓN ACTUAL PRIMERO.\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✗`))
+} else if (reason === DisconnectReason.loggedOut) {
+console.log(chalk.bold.redBright(`\n⚠️ SIN CONEXIÓN, BORRE LA CARPETA ${global.authFile} Y ESCANEA EL CÓDIGO QR ⚠️`))
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.restartRequired) {
+console.log(chalk.bold.cyanBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓\n┆ ❇️ CONECTANDO AL SERVIDOR...\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ✓`))
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.timedOut) {
+console.log(chalk.bold.yellowBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸\n┆ ⌛ TIEMPO DE CONEXIÓN AGOTADO, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸`))
+await global.reloadHandler(true).catch(console.error) //process.send('reset')
+} else {
+console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA: ${reason || 'No encontrado'} >> ${connection || 'No encontrado'}`))
+}}
 }
-}
-
 process.on('uncaughtException', console.error)
 
 let isInit = true;
