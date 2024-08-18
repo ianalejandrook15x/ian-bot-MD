@@ -26,7 +26,7 @@ colors: ['red']
 say(`Developed By • ianalejandrook15x`, {
 font: 'console',
 align: 'center',
-colors: ['yellow']
+colors: ['pink']
 });
 var isRunning = false;
 function start(file) {
@@ -77,4 +77,4 @@ console.warn('🚩 Se excedió el límite de Listeners en:');
 console.warn(warning.stack);
 }
 });
-start('start.js');
+start('main.js');
