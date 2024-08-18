@@ -26,7 +26,7 @@ global.mods = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
 global.packname = '⪛𑁍 𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝐌𝐃 𑁍⪜'
-global.author = '𝖮𝖿𝖼.𝖣𝗂𝖾𝗀𝗈 👑'
+global.author = 'Ianalejandrook15x 👑'
 global.wm = 'Ian Bot - MD'
 global.titulowm = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗'
 global.titulowm2 = '𝐈𝐚𝐧 𝐁𝐨𝐭 - 𝐌𝐃 🍄'
