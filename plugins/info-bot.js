@@ -13,7 +13,7 @@ conn.reply(m.chat, `*so*`, m, rcanal, )
 if (/^English$/i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
-/*if (/^Español$/i.test(m.text)) {
+/*if (/^Spanish$/i.test(m.text)) {
 conn.reply(m.chat, `*El primero en hablar es gay*`, m, rcanal, )
 }*/
 if (/^bug$/i.test(m.text)) {
