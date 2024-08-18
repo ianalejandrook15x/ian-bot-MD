@@ -78,7 +78,7 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 
-global.authFile = `MiniSession`
+global.authFile = `IanSession`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -176,7 +176,7 @@ rl.close()
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
             //console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
 
-            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.black(chalk.bgGreen(`🌸 CÓDIGO DE VINCULACIÓN 🌸`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
@@ -208,7 +208,7 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./MiniSession")
+let directorio = readdirSync("./IanSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
@@ -223,13 +223,13 @@ try {
 let listaDirectorios = readdirSync('./IanJadiBot/');
 let SBprekey = []
 listaDirectorios.forEach(directorio => {
-if (statSync(`./MiniJadiBot/${directorio}`).isDirectory()) {
+if (statSync(`./IanJadiBot/${directorio}`).isDirectory()) {
 let DSBPreKeys = readdirSync(`./IanJadiBot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
 DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./MiniJadiBot/${directorio}/${fileInDir}`)
+unlinkSync(`./IanJadiBot/${directorio}/${fileInDir}`)
 })
 }
 })
