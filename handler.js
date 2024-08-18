@@ -1,4 +1,3 @@
-
 import { smsg } from './lib/simple.js'
 import { format } from 'util' 
 import { fileURLToPath } from 'url'
@@ -96,22 +95,31 @@ export async function handler(chatUpdate) {
                     chat.antiLink = false
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
-                if (!('nsfw' in chat))
-                    chat.nsfw = false
+                if (!('modohorny' in chat))
+                    chat.modohorny = false
+                if (!('reaction' in chat))
+                    chat.reaction = false
                 if (!('simi' in chat))
                     chat.simi = false
+                if (!('antiver' in chat))
+                    chat.antiver = false
+                if (!('delete' in chat))
+                    chat.delete = false
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
                     welcome: true,
+                    delete: false,
                     audios: false,
                     detect: true,
                     antiLink: false,
                     onlyLatinos: false,
                     simi: false,
-                    nsfw: false, 
+                    antiver: false,
+                    modohorny: false, 
+                    reaction: false,
                     expired: 0, 
                 }
             var settings = global.db.data.settings[this.user.jid]
@@ -119,13 +127,19 @@ export async function handler(chatUpdate) {
             if (settings) {
                 if (!('self' in settings)) settings.self = false
                 if (!('jadibotmd' in settings)) settings.jadibotmd = true
-                if (!('antiPrivate' in settings)) settings.antiPrivate = false;
+               if (!('autobio' in settings)) settings.autobio = false
+                if (!('antiPrivate' in settings)) settings.antiPrivate = false
                 if (!('autoread' in settings)) settings.autoread = false
+                if (!('autoread2' in settings)) settings.autoread2 = false
+                if (!('antiSpam' in settings)) settings.antiSpam = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: false,
-                antiprivado: false,
                 jadibotmd: true,
+                autobio: false,
+                antiPrivate: false,
+                autoread: false,
+                autoread2: false,
+                antiSpam: true,
                 status: 0
             }
         } catch (e) {
@@ -248,9 +262,30 @@ export async function handler(chatUpdate) {
                             plugin.command === command :
                             false
 
-                if (!isAccept)
-                    continue
-                m.plugin = name
+                if (!isAccept) {
+continue
+}
+m.plugin = name
+if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
+let chat = global.db.data.chats[m.chat]
+let user = global.db.data.users[m.sender]
+if (!['owner-unbanchat.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
+if (name != 'owner-unbanchat.js' && name != 'owner-exec.js' && name != 'owner-exec2.js' && name != 'tool-delete.js' && chat?.isBanned && !isROwner) return 
+if (m.text && user.banned && !isROwner) {
+if (user.antispam > 2) return
+m.reply(`🚫 Está baneado(a), no puede usar los comandos de este bot!\n\n${user.bannedReason ? `\n💌 *Motivo:* 
+${user.bannedReason}` : '💌 *Motivo:* Sin Especificar'}\n\n⚠️ *Si este bot es cuenta oficial y tiene evidencia que respalde que este mensaje es un error, puede exponer su caso en:*\n\n🤍 ${asistencia}`)
+user.antispam++        
+return
+}
+
+//Antispam 2                
+if (user.antispam2 && isROwner) return
+let time = global.db.data.users[m.sender].spam + 3000
+if (new Date - global.db.data.users[m.sender].spam < 3000) return console.log(`[ SPAM ]`) 
+global.db.data.users[m.sender].spam = new Date * 1
+}
+              //  m.plugin = name
                 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                     let chat = global.db.data.chats[m.chat]
                     let user = global.db.data.users[m.sender]
@@ -295,12 +330,12 @@ export async function handler(chatUpdate) {
                 if (plugin.private && m.isGroup) {
                     fail('private', m, this)
                     continue
-                }
-                if (plugin.register == true && _user.registered == false) { 
-                    fail('unreg', m, this)
-                    continue
-                }
-                m.isCommand = true
+}
+              if (plugin.register == true && _user.registered == false) { 
+              fail('unreg', m, this)
+            continue
+           }
+             m.isCommand = true
                 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 
                 if (xp > 200)
                     m.reply('chirrido -_-')
@@ -405,15 +440,41 @@ export async function handler(chatUpdate) {
         }
 
         try {
-      if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
-    } catch (e) {
-      console.log(m, m.quoted, e)
-    }
-    const settingsREAD = global.db.data.settings[this.user.jid] || {}
-    if (opts['autoread']) await this.readMessages([m.key])
-    if (settingsREAD.autoread) await this.readMessages([m.key])
-  }
-}
+     if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
+} catch (e) { 
+      console.log(m, m.quoted, e)}
+       let settingsREAD = global.db.data.settings[this.user.jid] || {}  
+      if (opts['autoread']) await this.readMessages([m.key])
+      if (settingsREAD.autoread2) await this.readMessages([m.key])  
+
+     if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|ian|a|s)/gi)) {
+         let emot = pickRandom(["🚩", "🍟", "✨️", "🌸", "💥", "⭐️", "🌟", "🍂", "🫂", "🍁", "💖", "💞", "💕", "🍄"])
+       if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
+       }
+     function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
+       }}
+
+export async function deleteUpdate(message) {
+try {
+const { fromMe, id, participant } = message
+if (fromMe) return 
+let msg = this.serializeM(this.loadMessage(id))
+let chat = global.db.data.chats[msg?.chat] || {}
+if (!chat?.delete) return 
+if (!msg) return 
+if (!msg?.isGroup) return 
+const antideleteMessage = `╭•┈•〘❌ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ❌〙•┈• ◊
+│❒ 𝗨𝗦𝗨𝗔𝗥𝗜𝗢:
+│• @${participant.split`@`[0]}
+│
+│❒ 𝗔𝗰𝗮𝗯𝗮 𝗱𝗲 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘂𝗻 𝗺𝗲𝗻𝘀𝗮𝗷𝗲
+│𝗿𝗲𝗲𝗻𝘃𝗶𝗮𝗻𝗱𝗼... ⏱️
+╰•┈•〘❌ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ❌〙•┈• ◊`.trim();
+await this.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
+this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
+} catch (e) {
+console.error(e)
+}}
 
 global.dfail = (type, m, conn) => {
 const msg = {
@@ -421,8 +482,8 @@ rowner: '「👑」 *Esta función solo puede ser usada por mi creador*\n\n> Ofc
 owner: '「👑」 *Esta función solo puede ser usada por mi desarrollador.', 
 mods: '「🤴🏻」 *Esta función solo puede ser usada por mis desarrolladores.*', 
 premium: '「🍧」 *Esta función solo es para usuarios Premium.', 
-group: '「🎃」 *Esta funcion solo puede ser ejecutada en grupos.*', 
-private: '「🍭」 *Esta función solo puede ser usada en chat privado.*', 
+group: '「🍭」 *Esta funcion solo puede ser ejecutada en grupos.*', 
+private: '「🍄」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「👑」 *Este comando solo puede ser usado por admins.*', 
 botAdmin: '「🚩」 *Para usar esta función debo ser admin.*', 
 unreg: '「🌸」 *¡Hey! no estas registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*_❕ Ejemplo_* : *!reg ian.14*',
