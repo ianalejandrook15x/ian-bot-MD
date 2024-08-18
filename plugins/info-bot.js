@@ -13,7 +13,7 @@ conn.reply(m.chat, `*so*`, m, rcanal, )
 if (/^English$/i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
-/*if (/^reg$/i.test(m.text)) {
+/*if (/^/reg$/i.test(m.text)) {
 conn.reply(m.chat, `👤 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗢 👤
 •┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
 「💭」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}
