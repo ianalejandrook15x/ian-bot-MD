@@ -9,7 +9,6 @@ ${usedPrefix + command} detect
 ${usedPrefix + command} antidelete
 ${usedPrefix + command} antilink
 ${usedPrefix + command} antilink2
-${usedPrefix + command} modohorny
 ${usedPrefix + command} autolevelup
 ${usedPrefix + command} autosticker
 ${usedPrefix + command} reaction
@@ -186,15 +185,6 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.antiTwitch = isEnable 
-break
-
-case 'modohorny': case 'modocaliente': case 'modehorny':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.modohorny = isEnable          
 break
 
 case 'autolevelup': case 'autonivel': case 'nivelautomatico':
