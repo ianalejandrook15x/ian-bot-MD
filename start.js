@@ -214,17 +214,17 @@ return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./MiniSession/${files}`)
+unlinkSync(`./IanSession/${files}`)
 })
 } 
 
 function purgeSessionSB() {
 try {
-let listaDirectorios = readdirSync('./MiniJadiBot/');
+let listaDirectorios = readdirSync('./IanJadiBot/');
 let SBprekey = []
 listaDirectorios.forEach(directorio => {
 if (statSync(`./MiniJadiBot/${directorio}`).isDirectory()) {
-let DSBPreKeys = readdirSync(`./MiniJadiBot/${directorio}`).filter(fileInDir => {
+let DSBPreKeys = readdirSync(`./IanJadiBot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
