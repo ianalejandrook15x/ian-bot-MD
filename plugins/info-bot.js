@@ -10,11 +10,11 @@ conn.reply(m.chat, `🍂 ¡Hola! Soy Ian, en que puedo ayudarte hoy?\n\n✰ Usa 
 /*if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }*/
-if (/^sexo$/i.test(m.text)) {
-conn.reply(m.chat, `*pervertido*`, m, rcanal, )
+if (/^English$/i.test(m.text)) {
+conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
-/*if (/^a$/i.test(m.text)) {
-conn.reply(m.chat, `*rroz*`, m, rcanal, )
+/*if (/^Español$/i.test(m.text)) {
+conn.reply(m.chat, `*El primero en hablar es gay*`, m, rcanal, )
 }*/
 if (/^bug$/i.test(m.text)) {
 conn.reply(m.chat, `*tu mamá*`, m, rcanal, )
