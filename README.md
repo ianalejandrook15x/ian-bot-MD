@@ -13,5 +13,5 @@
 - ### **Panel:** [`Aquí`](https://panel.corinplus.com)
 - ### **Estado de servicios:** [`Aquí`](https://status.corinplus.com)
 - ### **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-- ### **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/K235lkvaGvlGRQKYm26xZP)
+- ### **Grupo CorinPlus:** [`Aquí`](https://chat.whatsapp.com/K235lkvaGvlGRQKYm26xZP)
 - ### **Contacto:** [`Ian Bot - MD`](wa.me/543876639332)
