@@ -7,17 +7,17 @@ let vid
 const isCommand7 = /^(facebook|fb|facebookdl|fbdl)$/i.test(command)
 
 async function reportError(e) {
-await conn.reply(m.chat, `⁖🧡꙰ 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁`, m, rcanal, )
-console.log(`⁖💚꙰ 𝙴𝚁𝚁𝙾𝚁 𝙴𝙽: ${usedPrefix + command} ⚠️\n`)
+await conn.reply(m.chat, `⁖🍂 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁`, m, rcanal, )
+console.log(`⁖🍁 𝙴𝚁𝚁𝙾𝚁 𝙴𝙽: ${usedPrefix + command} ⚠️\n`)
 console.log(e)
 }
 
 switch (true) {   
 case isCommand7:
 if (!text) return conn.reply(m.chat, `🚩 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`, m, rcanal, )
-if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '🚩 *ᥒ᥆ ᥱs ᥙᥒ ᥱᥒᥣᥲᥴᥱ ᥎ᥲ́ᥣіძ᥆*', m, rcanal, )
-// await conn.reply(m.chat, '⁖💚꙰  𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗩𝗶𝗱𝗲𝗼 𝗗𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸, 𝗘𝘀𝗽𝗲𝗿𝗲 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼....', m, rcanal, )
-conn.reply(m.chat, '🚀 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗩𝗶𝗱𝗲𝗼 𝗗𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸, 𝗘𝘀𝗽𝗲𝗿𝗲 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼....', m, {
+if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) return conn.reply(m.chat, '🎃 *ᥒ᥆ ᥱs ᥙᥒ ᥱᥒᥣᥲᥴᥱ ᥎ᥲ́ᥣіძ᥆*', m, rcanal, )
+// await conn.reply(m.chat, '⁖🍁  𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗩𝗶𝗱𝗲𝗼 𝗗𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸, 𝗘𝘀𝗽𝗲𝗿𝗲 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼....', m, rcanal, )
+conn.reply(m.chat, '☁ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗩𝗶𝗱𝗲𝗼 𝗗𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸, 𝗘𝘀𝗽𝗲𝗿𝗲 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼....', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
@@ -28,19 +28,19 @@ let messageType = checkMessageType(args[0])
 let message = ''
 switch (messageType) {
 case 'groups':
-message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗴𝗿𝘂𝗽𝗼 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖❤️꙰\n${global.wm}`
+message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗴𝗿𝘂𝗽𝗼 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖🌸\n${global.wm}`
 break
 case 'reel':
-message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗿𝗲𝗲𝗹𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖❤️꙰\n${global.wm}`
+message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗿𝗲𝗲𝗹𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖🌸\n${global.wm}`
 break
 case 'stories':
-message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗵𝗶𝘀𝘁𝗼𝗿𝗶𝗮𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖❤️꙰\n${global.wm}`
+message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗵𝗶𝘀𝘁𝗼𝗿𝗶𝗮𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖🌸\n${global.wm}`
 break
 case 'posts':
-message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗽𝗹𝘂𝗯𝗹𝗶𝗰𝗮𝗰𝗶𝗼𝗻𝗲𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖❤️꙰\n${global.wm}`
+message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗽𝗹𝘂𝗯𝗹𝗶𝗰𝗮𝗰𝗶𝗼𝗻𝗲𝘀 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖🌸\n${global.wm}`
 break
 default:
-message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖❤️꙰\n${global.wm}`
+message = `𝗩𝗶𝗱𝗲𝗼 𝗱𝗲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 ⁖🌸\n${global.wm}`
 break
 }
 try {
