@@ -29,20 +29,20 @@ additionalText = 'video'}
 let texto1 = `🚩 *Título:*
 • ${yt_play[0].title}
 
-⏱️ *Duración:* 
+☁ *Duración:* 
 • ${secondString(yt_play[0].duration.seconds)}
 
-⭐️ *Autor:*
+☁ *Autor:*
 • ${yt_play[0].author.name}
 
-🌸 *Canal:*
+☁ *Canal:*
 • ${yt_play[0].author.url}
 
-🔗 *Enlace:*
+☁ *Enlace:*
 • ${yt_play[0].url}
 
-*Enviando ${additionalText}*
-⏱️ Espere un momento`.trim()
+*Enviando su ${additionalText}*
+🌸 Espere un momento`.trim()
 await conn.sendMessage(m.chat, { text: texto1, contextInfo: { externalAdReply: { title: yt_play[0].title, body: dev, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: fkontak })
 
 if (command == 'play') {        
@@ -114,7 +114,7 @@ try {
 await m.react(rwait)
 let mediaa = await ytMp4(yt_play[0].url)
 await m.react(done)
-await conn.sendMessage(m.chat, { video: { url: mediaa.result }, fileName: `error.mp4`, caption: `🚩 *Título*: ${ttl}\n*Peso:* ${size}`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })   
+await conn.sendMessage(m.chat, { video: { url: mediaa.result }, fileName: `error.mp4`, caption: `🌸 *Título*: ${ttl}\n*Peso:* ${size}`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })   
 await m.react(done)   
 } catch {
 
@@ -126,7 +126,7 @@ let n = lolh.result.title || 'error'
 let n2 = lolh.result.link
 let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
-await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `🚩 *Título*: ${ttl}\n*Peso:* ${size}`, thumbnail: await fetch(n4) }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `🌸 *Título*: ${ttl}\n*Peso:* ${size}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
 await m.react(error)
 await conn.reply(m.chat, '☁ *Ocurrió un fallo*', m, fake) }}}    
