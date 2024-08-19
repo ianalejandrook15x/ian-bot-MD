@@ -1,27 +1,39 @@
-
 let handler = async (m, { conn, command, usedPrefix }) => {
-let cafirexostxt = `🌺 I N F I N I T Y 
+let txt = `✨ *C O R I N - P L U S - H O S T* 
 
-🔵 \`\`\`Información del Host\`\`\`
+*¿Quieres un Host de calidad y con bajos precios?*
+Pues te presento a *CorinPlusHost*, un hosting de calidad con servidores dedicados y precios por debajo de 1 USD, estos servidores están destinados a ofrecerte un Uptime 24/7 para que puedas alojar tus proyectos y qué estos funcionen de manera eficaz.
 
-💻 *Página*
-https://infinitywa-host.com/
+🌺 \`\`\`Información del Host\`\`\`
 
-✨ *Dashboard*
-https://dash.infinitywa-host.com
+🌸 *Dashboard:* 
+• https://dash.corinplus.com
 
-🍁 *Tutorial*
-https://youtu.be/c9RCnOV418E?si=s9vDgGSx16zxuwAX
+🍁 *Panel:*
+• https://panel.corinplus.com
 
-⚙️ *Panel*
-https://panel.infinitywa-host.com
+☘ *Comunidad Oficial:*
+• https://chat.whatsapp.com/HR30LhsuZPqCMImzuHcuON
 
-📢 *Canal de WhatsApp*
-https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A
+🍂 *Contacto (Corin PLus Host - Asistencia)*
+https://wa.me/573147616444
 
-🐉 *Comunidad*
-https://chat.whatsapp.com/CYGCgMh2LefBNhIAVIVhmE
-
-💻 *Contacto (Ian Alejandro)*
-https://wa.me/543876577197`
-
+> *Únete a está comunidad y disfruta de un servicio de calidad ✨*` 
+await conn.sendMessage(m.chat, { text: txt,
+contextInfo:{
+forwardingScore: 9999999,
+isForwarded: false, 
+"externalAdReply": {
+"showAdAttribution": true,
+"containsAutoReply": true,
+title: `🍄 C O R I N - H O S T 🍄`,
+body: `👑 Hosting 24/7 👑`,
+"previewType": "PHOTO",
+thumbnailUrl: 'https://telegra.ph/file/934d7ab39d50f7560cef2.png', 
+sourceUrl: 'https://dash.corinplus.com'}}},
+{ quoted: fkontak})
+}
+handler.tags = ['main'] 
+handler.help = ['host', 'hosting'] 
+handler.command = ['host', 'corin', 'corinhost', 'hosting']
+export default handler
