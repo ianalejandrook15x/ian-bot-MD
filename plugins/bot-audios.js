@@ -13,7 +13,7 @@ let vn = 'https://qu.ax/xynz.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
 this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}  
 
-if (/^Negro|corte|trabajo|🫂$/i.test(m.text) && chat.audios) {  
+if (/^Negro|hermoso|trabajo|🫂$/i.test(m.text) && chat.audios) {  
 if (!db.data.chats[m.chat].audios && m.isGroup) throw 0    
 let vn = 'https://qu.ax/ExSQ.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
