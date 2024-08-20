@@ -92,7 +92,7 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true 
                 if (!('antiLink' in chat))
-                    chat.antiLink = false
+                    chat.antiLink = true
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
                 if (!('modohorny' in chat))
@@ -114,7 +114,7 @@ export async function handler(chatUpdate) {
                     delete: false,
                     audios: false,
                     detect: true,
-                    antiLink: false,
+                    antiLink: true,
                     onlyLatinos: false,
                     simi: false,
                     antiver: false,
@@ -125,7 +125,8 @@ export async function handler(chatUpdate) {
             var settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('self' in settings)) settings.self = false
+               if (!('self' in settings)) settings.self = false
+               if (!('restrict' in settings)) settings.restrict = false
                 if (!('jadibotmd' in settings)) settings.jadibotmd = true
                if (!('autobio' in settings)) settings.autobio = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
@@ -134,6 +135,7 @@ export async function handler(chatUpdate) {
                 if (!('antiSpam' in settings)) settings.antiSpam = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
+                restrict: false,
                 jadibotmd: true,
                 autobio: false,
                 antiPrivate: false,
@@ -448,7 +450,7 @@ global.db.data.users[m.sender].spam = new Date * 1
       if (settingsREAD.autoread2) await this.readMessages([m.key])  
 
      if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|ian|a|s)/gi)) {
-         let emot = pickRandom(["🚩", "🍟", "✨️", "🌸", "💥", "⭐️", "🌟", "🍂", "🫂", "🍁", "💖", "💞", "💕", "🍄"])
+         let emot = pickRandom(["🚩", "🍟", "✨️", "🌸", "💥", "⭐️", "🌟", "🍂", "🫂", "🍁", "💖", "💞", "💕", "💋"])
        if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
        }
      function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
@@ -482,11 +484,11 @@ rowner: '「👑」 *Esta función solo puede ser usada por mi creador*\n\n> Ofc
 owner: '「👑」 *Esta función solo puede ser usada por mi desarrollador.', 
 mods: '「🤴🏻」 *Esta función solo puede ser usada por mis desarrolladores.*', 
 premium: '「🍧」 *Esta función solo es para usuarios Premium.', 
-group: '「🍭」 *Esta funcion solo puede ser ejecutada en grupos.*', 
-private: '「🍄」 *Esta función solo puede ser usada en chat privado.*', 
+group: '「☁」 *Esta funcion solo puede ser ejecutada en grupos.*', 
+private: '「🍭」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「👑」 *Este comando solo puede ser usado por admins.*', 
 botAdmin: '「🚩」 *Para usar esta función debo ser admin.*', 
-unreg: '「🌸」 *¡Hey! no estas registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*❕ Ejemplo* : */reg ian.14*',
+unreg: '「🌸」 *¡Hey! no estas registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*_❕ Ejemplo_* : */reg Yaemori.666*',
 restrict: '「💫」 *Esta característica esta desactivada.*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
