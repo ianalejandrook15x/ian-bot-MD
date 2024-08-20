@@ -5,26 +5,24 @@ import { xpRange } from '../lib/levelling.js'
 
 let tags = {
   'main': 'INFO 🌸',
-  'buscador': 'BUSQUEDAS 🧸',
+  'buscador': 'BUSQUEDAS 🌸',
   'fun': 'JUEGOS 🌸',
-  'jadibot': 'SUB BOTS 🧸',
+  'serbot': 'SUB BOTS 🌸',
   'rpg': 'RPG 🌸',
-  'rg': 'REGISTRO 🧸',
+  'rg': 'REGISTRO 🌸',
   'xp': 'EXP 🌸',
   'sticker': 'STICKERS 🌸',
-  'anime': 'ANIMEA 🧸',
+  'anime': 'ANIMES 🌸',
   'database': 'DATABASE 🌸',
-  'fix': 'FIXMSGESPERA 🧸',
+  'fix': 'FIXMSGESPERA 🌸',
   'grupo': 'GRUPOS 🌸',
-  'nable': 'ON / OFF 🧸', 
+  'nable': 'ON / OFF 🌸', 
   'descargas': 'DESCARGAS 🌸',
-  'youtube': 'YOUTUBE PLAY 🧸',
   'tools': 'HERRAMIENTAS 🌸',
-  'info': 'INFORMACIÓN 🧸',
-  'owner': 'CREADOR 👑', 
-  'mods': 'STAFF IAN 🧸',
+  'info': 'INFORMACIÓN 🌸',
+  'owner': 'CREADOR 🌸', 
   'audio': 'AUDIOS 🌸', 
-  'ai': 'AI 🧸',
+  'ai': 'AI 🌸',
   'transformador': 'CONVERTIDORES 🌸',
 }
 
@@ -33,30 +31,30 @@ const defaultMenu = {
 
 “ Hola *%name* soy *Ian*, %greeting ”
 
-┌───⊷ *INFO - BOT*
-┊  ✿︎ *Cliente:* %name
-┊  ✿︎ *Exp:* %exp
-┊  ✿︎ *Estrellas:* %estrellas
-┊  ✿︎ *Nivel:* %level
-┊  ✿︎ *Rango:* %role
-└─────────────  
+┌───⊷ INFO - BOT
+┊  ✿︎ Cliente: %name
+┊  ✿︎ Exp: %exp
+┊  ✿︎ Estrellas: %estrellas
+┊  ✿︎ Nivel: %level
+┊  ✿︎ Rango: %role
+└─────────────
 %readmore
-┌───⊷ *INFO - USER*
-┊  ✿︎ *Bot:* Ian Bot - MD 
-┊  ✿︎ *Modo* Público
-┊  ✿︎ *Baileys:* Multi Device
-┊  ✿︎ *Tiempo Activo:* %muptime
-┊  ✿︎ *Usuarios:* %totalreg 
+┌───⊷ INFO - USER
+┊  ✿︎ Bot: Ian Bot - MD 
+┊  ✿︎ Modo Público
+┊  ✿︎ Baileys: Multi Device
+┊  ✿︎ Tiempo Activo: %muptime
+┊  ✿︎ Usuarios: %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-      header: '*┏━❀「 %category 」*',
+    header: '*┏━✿︎「 %category 」*',
   body: '*┃›* %cmd',
-  footer: '*┗━❀*\n'
-  after: `• ${textbot}`,
+  footer: '*┗━✿︎*\n',
+  after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
@@ -144,7 +142,7 @@ npmdesc: _package.description,
 version: _package.version,
 exp: exp - min,
 maxexp: xp,
-botofc: (conn.user.jid == global.conn.user.jid ? '☁ 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `🌸 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
+botofc: (conn.user.jid == global.conn.user.jid ? '🚩 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `🚩 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
 totalexp: exp,
 xp4levelup: max - exp,
 github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
@@ -153,36 +151,18 @@ readmore: readMore
 }
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+await m.react('⭐️') 
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://cdn.wallpaper.tn/large/Nino-Nakano-Wallpaper-Hd-169503.jpg')
-
-  let category = "video"
-  const db = './media/database/db.json'
-  const db_ = JSON.parse(fs.readFileSync(db))
-  const random = Math.floor(Math.random() * db_.links[category].length)
-  const rlink = db_.links[category][random]
-  global.vid = rlink
-  const response = await fetch(vid)
-  const gif = await response.buffer()
- // const img = imagen1
-
-// await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲𝗹 𝗕𝗼𝘁...𓏲੭*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: '👑 ¡Super Bot De WhatsApp!', sourceUrl: redes, thumbnail: icons }}})
-
-// await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲𝗹 𝗕𝗼𝘁...𓏲੭*', m, rcanal)
-
-await m.react('🍄') 
-
-await conn.sendFile(m.chat, imagen1, 'nino.jpg', text.trim(), fkontak, null, rcanal)
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: dev, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m})
 
   } catch (e) {
-    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
+    conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
     throw e
   }
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'menú', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
+handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
 handler.register = true
 
 export default handler
@@ -191,11 +171,10 @@ const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 function clockString(ms) {
-  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
   var ase = new Date();
