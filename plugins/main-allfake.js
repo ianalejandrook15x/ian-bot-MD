@@ -100,8 +100,6 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363318758721861@newsletter', newsletterName: "『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』", serverMessageId: -1 }
 }}, { quoted: m }
-
-  //let vid = './Menuvid1.mp4'
   
 global.icono = [ 
 'https://telegra.ph/file/976d6293beca684cac3ab.jpg',
