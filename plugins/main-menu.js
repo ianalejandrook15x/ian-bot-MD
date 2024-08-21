@@ -52,7 +52,7 @@ const defaultMenu = {
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
     header: '*┏━✿︎「 %category 」*',
-  body: '*┃🍁>* %cmd',
+  body: '*┃›* %cmd',
   footer: '*┗━✿︎*\n',
   after: `> ${dev}`,
 }
@@ -152,7 +152,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
-      await m.react('🌸') 
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
