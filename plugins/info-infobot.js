@@ -83,7 +83,7 @@ Ian += `${'```' + Object.keys(used).map((key, _, arr) => `│ ${key.padEnd(Math.
 Ian += `╰─⬣`
 
 await conn.reply(m.chat, Ian, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '↷✦╎Info - Bot╎🚩˖ ⸙',body: packname, previewType: 0, thumbnail: icons, sourceUrl: redes}}})
-// await conn.sendFile(m.chat, imagen1, 'Nino.jpg', Nino, fkontak, null, rcanal)
+// await conn.sendFile(m.chat, imagen1, 'Menu.jpg', Menu, fkontak, null, rcanal)
 }
 handler.help = ['infobot']
 handler.tags = ['main']
