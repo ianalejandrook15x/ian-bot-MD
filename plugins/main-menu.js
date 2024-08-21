@@ -152,11 +152,13 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
+      await m.react('🌸') 
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let urls = [
-"https://telegra.ph/file/8f4158290c1263fe285ca.mp4", 
+"https://telegra.ph/file/8f4158290c1263fe285ca.mp4",
+"https://telegra.ph/file/0571d52d1e88fa0fb0b68.mp4",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
