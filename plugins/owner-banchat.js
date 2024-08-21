@@ -1,4 +1,3 @@
-
 let handler = async (m) => {
 
 global.db.data.chats[m.chat].isBanned = true
