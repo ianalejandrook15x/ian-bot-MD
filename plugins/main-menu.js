@@ -52,7 +52,7 @@ const defaultMenu = {
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
     header: '*┏━✿︎「 %category 」*',
-  body: '*┃›* %cmd',
+  body: '*┃🌸* %cmd',
   footer: '*┗━✿︎*\n',
   after: `> ${dev}`,
 }
