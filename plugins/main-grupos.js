@@ -1,42 +1,28 @@
 
-let handler = async (m, { conn, command }) => {
-let gps = `*◜💙 GRUPOS OFICIALES 💙◞*
+import fetch from 'node-fetch'
 
-🚩 ${packname} 
-${gp1}
+let handler  = async (m, { conn, usedPrefix, command }) => {
 
- *◜🤍 COLABORACIONES 🤍◞*
+let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para convivir con la comunidad* 🍂
 
-🌸 ${colab1}
-${gp2}
+1- 『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』
+*✰* ${grupo}
 
-🌸 ${colab2}
-${gp3}
+*─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*
 
-🌸 ${colab3}
-${gp4}
+➠ Enlace anulado? entre aquí! 
 
-🌸 ${namecomu}
-${comunidad1}
+☁ Canal :
+*✰* ${channel}
 
-🌸 ${namecomu2}
-${comunidad2}
+> ${dev}`
 
- *◜🌸 CANALES OFICIALES 🌸◞*
+await conn.sendFile(m.chat, imagen2, "ian.jpg", grupos, m, null, rcanal)
 
-🍭 ${namechannel}
-${channel}
+await m.react(emojis)
 
-🍭 ${namechannel2}
-${channel2}`
-
-await m.react(emojis) 
-
-await conn.sendFile(m.chat, imagen2, 'nino.jpg', gps, fkontak, null, rcanal)}
-
-handler.tags = ['main']
+}
 handler.help = ['grupos']
-handler.command = /^grupos|gruposIan|linkre|iangp|gpIan|gruposofc|gruposoficiales$/i
-handler.register = true
-
+handler.tags = ['main']
+handler.command = ['grupos', 'iangrupos', 'gruposian']
 export default handler
