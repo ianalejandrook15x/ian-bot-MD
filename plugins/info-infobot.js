@@ -1,4 +1,3 @@
-
 import db from '../lib/database.js'
 import { cpus as _cpus, totalmem, freemem, platform, hostname, version, release, arch } from 'os'
 import speed from 'performance-now'
