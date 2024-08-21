@@ -26,7 +26,7 @@ additionalText = 'audio'
 } else if (command === 'play2') {
 additionalText = 'video'}
 
-let texto1 = `🚩 *Título:*
+let texto1 = `☁ *Título:*
 • ${yt_play[0].title}
 
 ☁ *Duración:* 
