@@ -92,6 +92,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
+    let urls = [
+"https://telegra.ph/file/8f4158290c1263fe285ca.mp4",
+"https://qu.ax/EBdw.mp4",
+"https://qu.ax/czUX.mp4",
+];
     let totalreg = Object.keys(global.db.data.users).length
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
@@ -170,11 +175,6 @@ export default handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
-let urls = [
-"https://telegra.ph/file/8f4158290c1263fe285ca.mp4",
-"https://qu.ax/EBdw.mp4",
-"https://qu.ax/czUX.mp4",
-];
 function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
