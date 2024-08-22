@@ -29,7 +29,7 @@ let tags = {
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-“ Hola *%name* soy *Ian*
+“ Hola *%name* soy *Ian* %greeting ”
 
 ┌───⊷ INFO - BOT
 ┊  ✿︎ Cliente: %name
