@@ -67,7 +67,7 @@ var canal = 'https://whatsapp.com/channel/0029VajkZ6blXnlwPZmbuH1u'
 var git = 'https://github.com/ianalejandrook15x' 
 var youtube = 'https://www.youtube.com/@ianalejandrook14' 
 var github = 'https://github.com/ianalejandrook15x/ianxdd' 
-var facebook = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' 
+var facebook = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' 
 let tiktok = 'https://tiktok.com/@ian.ian271'
 let correo = 'sm.iam1836@gmail.com'
 
