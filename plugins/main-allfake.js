@@ -35,14 +35,14 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 global.creador = 'Wa.me/543876639332'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/543876577197'
-global.namechannel = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
-global.namechannel2 = '𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁 - 𝗧𝗲𝗮𝗺'
-global.namegrupo = '𝗚𝗿𝗼𝘂𝗽 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
-global.namecomu = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
-global.namecomu2 = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗠𝗼𝗼𝗻𝗹𝗶𝗴𝗵𝘁'
-global.colab1 = '𝗚𝗮𝘁𝗮𝗕𝗼𝘁 & 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
-global.colab2 = '𝗠𝗼𝗼𝗻𝗟𝗶𝗴𝗵𝘁 - 𝗕𝗼𝘁𝘀'
-global.colab3 = '𝗚𝗿𝗼𝘂𝗽 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
+global.namechannel = '☁ CorinPlus Host'
+global.namechannel2 = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
+global.namegrupo = 'シ︎ 𝗜𝗮𝗻𝗕𝗼𝘁-𝗠𝗗 🌸 𝗠𝘂𝗹𝘁𝗶-𝗕𝗢𝗧𝗦'
+global.namecomu = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
+global.namecomu2 = '☁ CorinPlus Host'
+global.colab1 = '°•✮•°fαитαѕтι¢ ωσяℓ∂ σf αиιмє࿐ཽ༵'
+global.colab2 = '⋆⁺₊⋆ ☾⋆⁺₊⋆ 𝔸ᴍ𝕒ɴᴛᴇs ᴅᴇ ᴛᴏᴅ𝗼 Tɪᴘ𝗼 ᴅᴇ Mᴜsɪᴄ𝕒 ⋆⁺₊⋆ ☾⋆⁺₊⋆'
+global.colab3 = 'IAN-MoDe'
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
