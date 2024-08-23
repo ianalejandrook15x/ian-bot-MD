@@ -13,7 +13,7 @@ Pues te presento a *CorinPlusHost*, un hosting de calidad con servidores dedicad
 • https://panel.corinplus.com
 
 ☘ *Comunidad Oficial:*
-• https://chat.whatsapp.com/HR30LhsuZPqCMImzuHcuON
+• https://chat.whatsapp.com/HR3OLhsuZPqCMImzuHcuON
 
 🍂 *Contacto (Corin PLus Host - Asistencia)*
 https://wa.me/573147616444
