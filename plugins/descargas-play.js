@@ -12,7 +12,7 @@ await m.react(rwait)
 
 try {
 
-conn.reply(m.chat, global.wait, m, {
+  m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
