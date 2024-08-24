@@ -11,7 +11,8 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react(rwait)
 
 try {
-
+  
+conn.reply(m.chat, global.wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
