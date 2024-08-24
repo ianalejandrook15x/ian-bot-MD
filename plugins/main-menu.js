@@ -34,9 +34,7 @@ const defaultMenu = {
 ┌───⊷ INFO - BOT
 ┊  ✿︎ Cliente: %name
 ┊  ✿︎ Exp: %exp
-┊  ✿︎ Estrellas: %estrellas
 ┊  ✿︎ Nivel: %level
-┊  ✿︎ Rango: %role
 └─────────────
 %readmore
 ┌───⊷ INFO - USER
@@ -157,8 +155,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     
 let urls = [
 "https://telegra.ph/file/8f4158290c1263fe285ca.mp4",
-"https://qu.ax/EBdw.mp4",
-"https://qu.ax/czUX.mp4",
+"https://qu.ax/yHss.mp4",
+"https://qu.ax/UjF.mp4",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
