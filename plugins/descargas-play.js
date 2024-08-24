@@ -12,7 +12,6 @@ await m.react(rwait)
 
 try {
 
-  m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
