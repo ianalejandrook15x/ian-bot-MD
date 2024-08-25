@@ -7,54 +7,54 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 if (!text) throw `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused4}\n*${usedPrefix + command} Es un Secreto Plan B*`
 try { 
 const yt_play = await search(args.join(' '))
-const texto1 = `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
+const texto1 = `*⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒═══ ${vs} ═══⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒*
 
-ও ${mid.smsYT1}
+🌸 ${mid.smsYT1}
 » ${yt_play[0].title}
-﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও ${mid.smsYT15}
+⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒⭒─ׄ─ׅ─ׄ─⭒─ׄ
+🌸 ${mid.smsYT15}
 » ${yt_play[0].ago}
-﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও ${mid.smsYT5}
+⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒⭒─ׄ─ׅ─ׄ─⭒─ׄ
+🌸 ${mid.smsYT5}
 » ${secondString(yt_play[0].duration.seconds)}
-﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও  ${mid.smsYT10}
+⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒⭒─ׄ─ׅ─ׄ─⭒─ׄ
+🌸  ${mid.smsYT10}
 » ${MilesNumber(yt_play[0].views)}
-﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও  ${mid.smsYT2}
+⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒⭒─ׄ─ׅ─ׄ─⭒─ׄ
+🌸  ${mid.smsYT2}
 » ${yt_play[0].author.name}
-﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও ${mid.smsYT4}
+⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒⭒─ׄ─ׅ─ׄ─⭒─ׄ
+🌸 ${mid.smsYT4}
 » ${yt_play[0].url}
 
-*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*`.trim()
+*⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒═══ ${vs} ═══⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒*`.trim()
 
 let listSections = [];             
 listSections.push({
 title: comienzo + ' 📡 𝗧𝗜𝗣𝗢𝗦 𝗗𝗘 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 ' + fin,
-rows: [{ header: "𓃠 𝗔 𝗨 𝗗 𝗜 𝗢 (Opcion 1)", title: "", id: `${usedPrefix}yta ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, /*{ header: "𓃠 𝗔 𝗨 𝗗 𝗜 𝗢 (Opcion 2)", title: "", id: `${usedPrefix}play.1 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },*/
-{ header: "𓃠 𝗔 𝗨 𝗗 𝗜 𝗢   𝗗 𝗢 𝗖", title: "", id: `${usedPrefix}ytmp3doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-{ header: "𓃠 𝗩 𝗜 𝗗 𝗘 𝗢 (Opcion 1)", title: "", id: `${usedPrefix}ytv ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-/*{ header: "𓃠 𝗩 𝗜 𝗗 𝗘 𝗢 (Opcion 2)", title: "", id: `${usedPrefix}play.2 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },*/
-{header: "𓃠 𝗩 𝗜 𝗗 𝗘 𝗢   𝗗 𝗢 𝗖", title: "", id: `${usedPrefix}ytmp4doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n`}
+rows: [{ header: "🌸 𝗔𝗨𝗗𝗜𝗢 (Opcion 1)", title: "", id: `${usedPrefix}yta ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, /*{ header: "🌸 𝗔𝗨𝗗𝗜𝗢 (Opcion 2)", title: "", id: `${usedPrefix}play.1 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },*/
+{ header: "🌸 𝗔𝗨𝗗𝗜𝗢   𝗗𝗢𝗖", title: "", id: `${usedPrefix}ytmp3doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
+{ header: "🌸 𝗩𝗜𝗗𝗘𝗢 (Opcion 1)", title: "", id: `${usedPrefix}ytv ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
+/*{ header: "🌸 𝗩𝗜𝗗𝗘𝗢 (Opcion 2)", title: "", id: `${usedPrefix}play.2 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },*/
+{header: "🌸 𝗩𝗜𝗗𝗘𝗢   𝗗𝗢𝗖", title: "", id: `${usedPrefix}ytmp4doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n`}
 ]});
 
 /*listSections.push({
-  text: `*𝙀𝙇𝙄𝙅𝘼 𝙌𝙐𝙀 𝙑𝘼 𝙃𝘼𝘾𝙀𝙍 𝘾𝙊𝙉  ${text}*`,
+  text: `*Eʟɪɢᴀ ǫᴜᴇ ᴠᴀ ʜᴀᴄᴇʀ ᴄᴏɴ  ${text}*`,
   footer: global.wm,
-  title: `${htki} *♻️ Descargas* ${htka}`,
-  buttonText: `🍄 Eligir 🍄`,
+  title: `${htki} *☁ Dᴇsᴄᴀʀɢᴀs* ${htka}`,
+  buttonText: `🍄 Eʟɪɢɪʀ 🍄`,
   sections
 }) */
 
-await conn.sendList(m.chat, `*𝙀𝙇𝙄𝙅𝘼 𝙌𝙐𝙀 𝙑𝘼 𝙃𝘼𝘾𝙀𝙍 𝘾𝙊𝙉  ${text}*`, `\n${htki} *♻️ 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙎* ${htka}`, `🍄 𝙀𝙇𝙀𝙂𝙄𝙍 🍁`, listSections, {quoted: fkontak});
+await conn.sendList(m.chat, `*Eʟɪɢᴀ ǫᴜᴇ ᴠᴀ ʜᴀᴄᴇʀ ᴄᴏɴ  ${text}*`, `\n${htki} *☁ Dᴇsᴄᴀʀɢᴀs* ${htka}`, `🍄 Eʟɪɢɪʀ 🍄`, listSections, {quoted: fkontak});
 } catch (e) {
 await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, fkontak, m)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)
 handler.limit = 0
 }}
-handler.command = ['play', 'play2', 'play3', 'play4']
+handler.command = ['play']
 //handler.limit = 3
 //handler.register = true 
 export default handler;
