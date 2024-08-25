@@ -13,9 +13,11 @@ conn.reply(m.chat, `*so*`, m, rcanal, )
 if (/^English$/i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
-/*if (/^/Corin$/i.test(m.text)) {
-conn.reply(m.chat, `_*Hola buscas algun servidor con precios bajeos ? Te presento a CorinPLus un servicio hosting confiable y de buena calidad, entre por aqui https://dash.corinplus.com_*`, m, rcanal, )
-}*/
+
+if (/^English$/i.test(m.text)) {
+conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
+}
+  
 if (/^Corin$/i.test(m.text)) {
 conn.reply(m.chat, `*_Hola buscas algun servidor con precios bajos ? Te presento a CorinPLus un servicio hosting confiable y de buena calidad, entre por aqui https://dash.corinplus.com Gracias por utilizar IanBot-MD_*`, m, rcanal, )
 }
@@ -25,3 +27,4 @@ conn.reply(m.chat, `*_Hola tienes alguna duda sobre el bot o sobre el hosting en
 return !0;
 };
 export default handler;
+%name
