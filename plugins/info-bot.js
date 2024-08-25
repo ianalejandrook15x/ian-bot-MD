@@ -14,7 +14,7 @@ if (/^English$/i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
 
-if (/^English$/i.test(m.text)) {
+if (/^$%name./i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
   
@@ -27,4 +27,3 @@ conn.reply(m.chat, `*Hola tienes alguna duda sobre el bot o sobre el hosting env
 return !0;
 };
 export default handler;
-%name
