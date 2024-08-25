@@ -28,4 +28,3 @@ handler.tags = ['rpg']
 handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
 handler.register = true 
 export default handler
-s
