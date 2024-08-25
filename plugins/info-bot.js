@@ -22,7 +22,7 @@ if (/^Corin$/i.test(m.text)) {
 conn.reply(m.chat, `*_Hola buscas algun servidor con precios bajos ? Te presento a CorinPLus un servicio hosting confiable y de buena calidad, entre por aqui https://dash.corinplus.com Gracias por utilizar IanBot-MD_*`, m, rcanal, )
 }
 if (/^duda$/i.test(m.text)) {
-conn.reply(m.chat, `*_Hola tienes alguna duda sobre el bot o sobre el hosting enviame mensaje al privado ☁ Wa.me/543876639332 Att 'ianalejandrook15x'_*`, m, rcanal, )
+conn.reply(m.chat, `*_Hola tienes alguna duda sobre el bot o sobre el hosting enviame mensaje al privado ☁ Wa.me/543876639332 Att ianalejandrook15x_*`, m, rcanal, )
 }
 return !0;
 };
