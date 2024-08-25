@@ -14,7 +14,7 @@ if (/^English$/i.test(m.text)) {
 conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
 
-if (/^.reg ${name}$.{age}/i.test(m.text)) {
+if (/^reg ian.14/i.test(m.text)) {
 conn.reply(m.chat, `*Ya estas registrado a IanBot-MD*`, m, rcanal, )
 }
   
