@@ -92,7 +92,7 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true 
                 if (!('antiLink' in chat))
-                    chat.antiLink = false
+                    chat.antiLink = true
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
                 if (!('modohorny' in chat))
@@ -114,7 +114,7 @@ export async function handler(chatUpdate) {
                     delete: false,
                     audios: false,
                     detect: true,
-                    antiLink: false,
+                    antiLink: true,
                     onlyLatinos: false,
                     simi: false,
                     antiver: false,
@@ -171,10 +171,8 @@ export async function handler(chatUpdate) {
             }, time)
         }
 
-        //if (m.isBaileys) return 
-        if (m.isBaileys || isBaileysFail && m?.sender === this?.this?.user?.jid) {
-        return
-        }
+        if (m.isBaileys)
+            return
         m.exp += Math.ceil(Math.random() * 10)
 
         let usedPrefix
@@ -346,7 +344,7 @@ global.db.data.users[m.sender].spam = new Date * 1
                 else
                     m.exp += xp
                 if (!isPrems && plugin.estrellas && global.db.data.users[m.sender].estrellas < plugin.estrellas * 1) {
-                    conn.reply(m.chat, `Se agotaron tus *⭐️ Estrellas*`, m, fake)
+                    conn.reply(m.chat, `Se agotaron tus *💵 Dolares*`, m, fake)
                     continue
                 }
                 let extra = {
@@ -382,7 +380,7 @@ global.db.data.users[m.sender].spam = new Date * 1
                     if (e) {
                         let text = format(e)
                         for (let key of Object.values(global.APIKeys))
-                            text = text.replace(new RegExp(key, 'g'), 'Administrador')
+                            text = text.replace(new RegExp(key, 'g'), '#HIDDEN#')
                         m.reply(text)
                     }
                 } finally {
@@ -448,12 +446,10 @@ global.db.data.users[m.sender].spam = new Date * 1
 } catch (e) { 
       console.log(m, m.quoted, e)}
        let settingsREAD = global.db.data.settings[this.user.jid] || {}  
-       if (opts['autoread']) await this.readMessages([m.key])
-       if (settingsREAD.autoread2) await this.readMessages([m.key])  
-      // await conn.sendPresenceUpdate('composing', m.chat)
-      // this.sendPresenceUpdate('recording', m.chat)
+      if (opts['autoread']) await this.readMessages([m.key])
+      if (settingsREAD.autoread2) await this.readMessages([m.key])  
 
-     if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|iann|ian|a|s)/gi)) {
+     if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|ian|a|s)/gi)) {
          let emot = pickRandom(["🚩", "🍟", "✨️", "🌸", "💥", "⭐️", "🌟", "🍂", "🫂", "🍁", "💖", "💞", "💕", "💋"])
        if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
        }
@@ -484,15 +480,15 @@ console.error(e)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: '「👑」 *Esta función solo puede ser usada por mi creador*\n\n> ianalejandrook15x.', 
+rowner: '「👑」 *Esta función solo puede ser usada por mi creador*\n\n> ianalejandrook15x', 
 owner: '「👑」 *Esta función solo puede ser usada por mi desarrollador.', 
-mods: '「🍁」 *Esta función solo puede ser usada por mis desarrolladores.*', 
+mods: '「🤴🏻」 *Esta función solo puede ser usada por mis desarrolladores.*', 
 premium: '「🍧」 *Esta función solo es para usuarios Premium.', 
-group: '「🐢」 *Esta funcion solo puede ser ejecutada en grupos.*', 
+group: '「☁」 *Esta funcion solo puede ser ejecutada en grupos.*', 
 private: '「🍭」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「👑」 *Este comando solo puede ser usado por admins.*', 
-botAdmin: '「🍄」 *Para usar esta función debo ser admin.*', 
-unreg: '「🌸」 No te encuentras registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*☁ Ejemplo* : */reg Ian.14*',
+botAdmin: '「🍁」 *Para usar esta función debo ser admin.*', 
+unreg: '「🌸」 *No te encuentras registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*❕ Ejemplo* : */reg ian.14*',
 restrict: '「💫」 *Esta característica esta desactivada.*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
