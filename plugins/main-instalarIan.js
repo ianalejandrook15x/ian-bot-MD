@@ -14,7 +14,7 @@ apt-get update -y && apt-get upgrade -y
 
 pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 
-git clone https://github.com/ianalejandrook15x/ianxdd && cd ianxdd && yarn install && npm install 
+git clone https://github.com/ianalejandrook15x/ian-bot-MD && cd ian-bot-MD && yarn install && npm install 
 
 ls
 
@@ -22,7 +22,7 @@ npm start
 
 _Utilice "comandos" para enviarle los comandos uno por uno 🚩_
 
-_Utilice "infinity" para enviarle la instalación por el host *Infinity* 🚩_`
+_Utilice "CorinPlus" para enviarle la instalación por el host *CorinPlus* 🚩_`
 
 conn.reply(m.chat, texto, m, rcanal )
 
@@ -35,7 +35,7 @@ m.reply('apt-get update -y && apt-get upgrade -y')
 await delay(1000 * 1)
 m.reply('pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn')
 await delay(1000 * 1)
-m.reply('git clone https://github.com/ianalejandrook15x/ianxdd && cd ianxdd && yarn install && npm install ')
+m.reply('git clone https://github.com/ianalejandrook15x/ian-bot-MD && cd ian-bot-MD && yarn install && npm install ')
 await delay(1000 * 1)
 m.reply('ls')
 await delay(1000 * 1)
@@ -43,7 +43,7 @@ m.reply('npm start')
 }
 
 if (/^cafirexos$/i.test(m.text) ) {
-conn.reply(m.chat, '✏️ *Instalación por Cafirexos*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Estados de nuestro Servicios:\nhttps://status.infinitywa-host.com/\n\n• Panel:\nhttps://panel.infinitywa-host.com', m, rcanal)
+conn.reply(m.chat, '✏️ *Instalación por CorinPlus*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Estados de nuestro Servicios:\nhttps://status.corinplus.com//\n\n• Panel de Control:\nhttps://dash.corinplus.com/home', m, rcanal)
 await delay(2000 * 1)
 conn.sendMessage(m.chat, {image: {url: 'https://rare-gallery.com/mocahbig/62122-Nino-NakanoNino-Nakano.png'}, caption: ''}, {quoted: fkontak})
 await delay(1000 * 1)
