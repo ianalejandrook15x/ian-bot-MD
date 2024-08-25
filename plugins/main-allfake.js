@@ -102,12 +102,12 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
   
 global.icono = [ 
-'https://telegra.ph/file/976d6293beca684cac3ab.jpg',
-'https://telegra.ph/file/aacfe7c17bac5c24e9846.jpg',
-'https://telegra.ph/file/94be9ccbb582f145bcdcf.jpg',
-'https://telegra.ph/file/ed55357e3dbb2fe540fa9.jpg',
-'https://telegra.ph/file/af9b07e9dfd3c88c7c7cf.jpg',
-'https://telegra.ph/file/a2a3041d7fd31df231ab0.jpg'
+'https://telegra.ph/file/a5f15c1380e1912a9f26a.jpg',
+'https://telegra.ph/file/95db47d13e82b8babd98f.jpg',
+'https://telegra.ph/file/e59623c6aa1b909c5e876.jpg',
+'https://telegra.ph/file/7a9d43d8b1cf2bbfb3a2e.jpg',
+'https://telegra.ph/file/3e57c372af98455886391.png',
+'https://telegra.ph/file/cb2b321961621f0bb3065.jpg',
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363301598733462@newsletter", serverMessageId: 100, newsletterName: '☁ CorinPlus Host', }, externalAdReply: { showAdAttribution: true, title: packname, body: '🌸 ¡Super Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
