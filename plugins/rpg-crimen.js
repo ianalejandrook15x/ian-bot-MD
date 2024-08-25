@@ -35,7 +35,7 @@ break
 case 1:
 let amountSubtracted = Math.min(Math.floor(Math.random() * (senderEstrellas - minAmount + 1)) + minAmount, maxAmount)
 users[senderId].estrellas -= amountSubtracted
-conn.reply(m.chat, `☁ No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 💵 Dolares* a ${senderName}.`, m, rcanal)
+conn.reply(m.chat, `☁ No fuiste cuidadoso y te atraparon mientras cometias tu crime, se restaron *-${amountSubtracted} 💵 Dolares* a ${senderName}.`, m, rcanal)
 break
 case 2:
 let smallAmountTaken = Math.min(Math.floor(Math.random() * (randomUserEstrellas / 2 - minAmount + 1)) + minAmount, maxAmount)
