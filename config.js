@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-   ['543876577197', 'Ian ☁', true],
+   ['54387639332', 'Ian ☁', true],
    ['543876639332', 'ianalejandroook15x Ow', true],
 ]
 
