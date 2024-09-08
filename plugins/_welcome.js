@@ -17,6 +17,6 @@ await conn.sendLuffy(m.chat, packname, textbot, bye, img, img, redes, fkontak)
   }
 
   if (chat.welcome && m.messageStubType == 32) {
-    let kick = `┌─★ *IAN BOT -MD* \n│「 𝗔𝗗𝗜𝗢𝗦 🌸 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │🌺  𝗦𝗲 𝗳𝘂𝗲\n   │🌺 𝗡𝘂𝗻𝗰𝗮 𝘁𝗲 𝗾𝘂𝗶𝘀𝗶𝗺𝗼𝘀 𝗮𝗾𝘂𝗶\n   └───────────────┈ ⳹`
+    let kick = `┌─★ *IAN BOT - MD* \n│「 𝗔𝗗𝗜𝗢𝗦 🌸 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │🌺  𝗦𝗲 𝗳𝘂𝗲\n   │🌺 𝗡𝘂𝗻𝗰𝗮 𝘁𝗲 𝗾𝘂𝗶𝘀𝗶𝗺𝗼𝘀 𝗮𝗾𝘂𝗶\n   └───────────────┈ ⳹`
 await conn.sendLuffy(m.chat, packname, textbot, kick, img, img, redes, fkontak)
 }}
