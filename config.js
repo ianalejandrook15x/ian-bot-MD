@@ -19,6 +19,9 @@ global.owner = [
 global.mods = []
 global.prems = []
 
+//cambiar a true si el bot detecta sus propios comandos.
+global.isBaileysFail = false
+
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = '⪛✰ 𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝐌𝐃 ✰⪜'
