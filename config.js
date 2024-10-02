@@ -23,12 +23,12 @@ global.isBaileysFail = false
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝐌𝐃 ✰⪜'
+global.packname = '⪛✰ 𝗜𝗔𝗡 𝗕𝗢𝗧 - 𝗠𝗗 ✰⪜'
 global.botname = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗'
-global.wm = '𝗜𝗮𝗻𝗮𝗹𝗲𝗷𝗮𝗻𝗱𝗿𝗼 𝗕𝗼𝘁 - 𝗠𝗗 🍂'
+global.wm = '𝗜𝗮𝗻𝗖𝗿𝗲𝗮𝘁𝗼𝗿 𝗕𝗼𝘁 - 𝗠𝗗 🍂'
 global.author = 'ianalejandrook15x 👑'
-global.dev = '🌸 Powered By Iᴀɴᴀʟᴇᴊᴀɴᴅʀᴏᴏᴋ15x 𑁍'
-global.textbot = '𝗜𝗮𝗻 𝗕𝗼𝘁 : 𝗶𝗮𝗻𝗮𝗹𝗲𝗷𝗮𝗻𝗱𝗿𝗼𝗼𝗸15𝘅 🌸'
+global.dev = '🌸 Powered By IanCreator 🌸'
+global.textbot = '𝗜𝗮𝗻 𝗕𝗼𝘁 : 𝗶𝗮𝗻𝗖𝗿𝗲𝗮𝘁𝗼𝗿 🌸'
 global.vs = '2.0.5'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
