@@ -267,7 +267,6 @@ ${usedPrefix + command} autoread
 ${usedPrefix + command} antiver
 ${usedPrefix + command} detect 
 ${usedPrefix + command} delete
-${usedPrefix + command} nsfw 
 ${usedPrefix + command} antitraba
 ${usedPrefix + command} modoadmin 
 ${usedPrefix + command} antiarabes 
