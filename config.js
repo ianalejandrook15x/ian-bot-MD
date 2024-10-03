@@ -27,12 +27,12 @@ global.languaje = 'Español'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝗜𝗔𝗡 𝗕𝗢𝗧 - 𝗠𝗗 ✰⪜'
-global.botname = '𝗜𝗮𝗻 𝗕𝗼𝘁 - 𝗠𝗗'
-global.wm = '𝗜𝗮𝗻𝗖𝗿𝗲𝗮𝘁𝗼𝗿 𝗕𝗼𝘁 - 𝗠𝗗 🍂'
-global.author = 'ianalejandrook15x 👑'
-global.dev = '🌸 Powered By IanCreator 🌸'
-global.textbot = '𝗜𝗮𝗻 𝗕𝗼𝘁 : 𝗶𝗮𝗻𝗖𝗿𝗲𝗮𝘁𝗼𝗿 🌸'
+global.packname = '【 เαɳ ɓσƭ - MƊ 】'
+global.botname = 'Iαɳ Bσƚ - MD'
+global.wm = 'Bσƚ ιαɳ MD - ιαɳαʅҽʝαɳԃɾσσƙ15x'
+global.author = 'ιαɳαʅҽʝαɳԃɾσσƙ15x 🌸'
+global.dev = 'Pσɯҽɾҽԃ Bყ Iαɳ 🌙'
+global.textbot = 'Iαɳ Bσƚ : Iαɳαʅҽʝαɳԃɾσσƙ15x'
 global.vs = '3.0.4'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
