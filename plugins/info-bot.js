@@ -10,8 +10,24 @@ conn.reply(m.chat, `🍂 ¡Hola! Soy Ian, en que puedo ayudarte hoy?\n\n✰ Usa 
 /*if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }*/
-if (/^English$/i.test(m.text)) {
-conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
+if (/^.reglas$/i.test(m.text)) {
+conn.reply(m.chat, `> *Hola si quieres unir a *IanBot-MD* a tus grupos deberás cumplir con los requisitos* 🌙
+
+> *Requisito 1*: *El grupo en el que va a unir al bot debe de tener un mínimo de 25 miembros dado que si no cumple con esta petición el bot no será otorgado*  
+
+> *Requisito 2*: *Deberá de compartir el link del canal del Bot para seguir creciendo la comunidad del Bot*    *Link*: https://whatsapp.com/channel/0029VaogOkQ3gvWhofzhKH10
+
+> *Requisito 3*: *Para una función mejor del Bot ( Opcional*) *dar administración al bot para que pueda cumplir con las siguientes tareas: anti link, anti bot, anti spam, kick, entre otras funciones*
+
+> *Requisito 4*: *Si no desea compartir el link del canal del Bot deberá dejar una estrella en el repositorio del Bot para obtener más confianza al utilizarlo* 
+
+> https://github.com/ianalejandrook15x/ian-bot-MD
+
+> *Requisito 5*: *No hacer Spam con el bot si se presenta este caso se mes dará de baja al bot por favor respete las reglas* 
+
+> Tҽαɱ Sԋιɳιɳɠ Mσσɳ 🌙
+
+> Pσɯҽɾҽԃ Bყ ιαɳαʅҽʝαɳԃɾσσƙ15x`, m, rcanal, )
 }
 
 if (/^Bot de mierda/i.test(m.text)) {
