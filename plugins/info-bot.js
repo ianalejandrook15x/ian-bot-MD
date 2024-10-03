@@ -10,7 +10,7 @@ conn.reply(m.chat, `🍂 ¡Hola! Soy Ian, en que puedo ayudarte hoy?\n\n✰ Usa 
 /*if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }*/
-if (/^.reglas$/i.test(m.text)) {
+if (/^reglas$/i.test(m.text)) {
 conn.reply(m.chat, `> *Hola si quieres unir a IanBot-MD a tus grupos deberás cumplir con los requisitos* 🌙
 
 > *Requisito 1*: *El grupo en el que va a unir al bot debe de tener un mínimo de 25 miembros dado que si no cumple con esta petición el bot no será otorgado*  
