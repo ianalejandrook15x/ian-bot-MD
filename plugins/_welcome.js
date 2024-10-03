@@ -3,14 +3,14 @@ import fetch from 'node-fetch'
 
 export async function before(m, {conn, participants, groupMetadata}) {
   if (!m.messageStubType || !m.isGroup) return !0;
-  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://tinyurl.com/238t2yav')
+  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://qu.ax/lWFJ.jpg')
   let img = await (await fetch(`${pp}`)).buffer()
   let chat = global.db.data.chats[m.chat]
 
   if (chat.bienvenida && m.messageStubType == 27) {
     let bienvenida = `╰⊱🌸≺ *${botname}* \n「 Bιҽɳʋҽɳιԃσ 」\n「  @${m.messageStubParameters[0].split`@`[0]}  」\n「 ${groupMetadata.subject} 」\n「 Dιʂϝɾυƚҽ ʂҽ ҽʂƚαԃια 🌸 」`
     
-await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal, estilo)
+await conn.sendLuffy(m.chat, botname, textbot, bienvenida, img, img, canal, estilo)
   }
   
   if (chat.bienvenida && m.messageStubType == 28) {
