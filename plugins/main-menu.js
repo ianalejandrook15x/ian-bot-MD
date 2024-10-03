@@ -53,9 +53,9 @@ Hola *%name* soy *Ian*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: ' ┏━━━━━━「 MENU ✯ %category 」━━━━',
+    header: ' ┏━「 MENU ✯ %category 」━━━━━━━',
   body: '> 🌸 >%cmd',
-  footer: ' ┗━━━━━━\n',
+  footer: ' ┗━━━━━━━━━━━━━━━━━━\n',
   after: `> ${dev}`,
 }
 
