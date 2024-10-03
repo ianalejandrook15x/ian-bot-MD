@@ -17,18 +17,18 @@ export default handler
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let biografia = await conn.fetchStatus('543876639332' +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
-let biografiaBot = await conn.fetchStatus(`${conn.user.jid.split('@')[0]}` +'@s.whatsapp.net').catch(_ => 'Sin Biografía')
-let bio = biografia.status?.toString() || 'Sin Biografía'
-let biobot = biografiaBot.status?.toString() || 'Sin Biografía'
+let biografia = await conn.fetchStatus('5493876432076' +'@s.whatsapp.net').catch(_ => 'Hσʅα ɱҽ ʅʅαɱσ Iαɳ ყ ʂσყ ԃυҽñσ ԃҽ IAN-BOT')
+let biografiaBot = await conn.fetchStatus(`${conn.user.jid.split('@')[0]}` +'@s.whatsapp.net').catch(_ => 'Hσʅα ɱҽ ʅʅαɱσ Iαɳ ყ ʂσყ ԃυҽñσ ԃҽ IAN-BOT')
+let bio = biografia.status?.toString() || 'Hσʅα ɱҽ ʅʅαɱσ Iαɳ ყ ʂσყ ԃυҽñσ ԃҽ IAN-BOT'
+let biobot = biografiaBot.status?.toString() || 'Hσʅα ɱҽ ʅʅαɱσ Iαɳ ყ ʂσყ ԃυҽñσ ԃҽ IAN-BOT'
 let name = await conn.getName(who)
 
 await sendContactArray(conn, m.chat, [
-[`${nomorown}`, `👑 Propietario`, `🌸 ianalejandrook15x`, dev, correo, `Argentina ☁`, `${yt}`, bio],
-[`${conn.user.jid.split('@')[0]}`, `Es un Bot`, `${wm}`, `📵 No Hacer Spam`, correo, `Argentina ☁`, md, biobot]
+[`5493876639332`, `🌙 Propietario`, `🌸 ιαɳαʅҽʝαɳԃɾσσƙ15x `, dev, correo, `🎌 Tokio`, `${yt}`, bio],
+[`${conn.user.jid.split('@')[0]}`, `Eʂ υɳ ზσƚ`, `${wm}`, `📵 Nσ ԋαƈҽɾ ʂραɱ`, correo, `🎌 Tokio`, md, biobot]
 ], m)
 
-await conn.reply(m.chat,  `*❕ ${name} él es mi creador, si quieres reportar un error contáctalo*`, m, fake)
+await conn.reply(m.chat,  `*❕ ${name} él es mi dueño, si quieres reportar un error contáctalo*`, m, fake)
 }
 
 handler.help = ['owner']
