@@ -29,28 +29,32 @@ let tags = {
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-“ Hola *%name* soy *Ian* “
+Hola *%name* soy *Ian*
 
-┌───⊷ INFO - BOT
-┊  ✿︎ Cliente: %name
-┊  ✿︎ Exp: %exp
-┊  ✿︎ Nivel: %level
-└─────────────
+┏━━━━━━━━ CREADOR
+┃  ✿︎ ιαɳαʅҽʝαɳԃɾσσƙ15x
+┗━━━━━━━━━━━━━━
 %readmore
-┌───⊷ INFO - USER
-┊  ✿︎ Bot: Ian Bot - MD 
-┊  ✿︎ Modo Público
-┊  ✿︎ Baileys: Multi Device
-┊  ✿︎ Tiempo Activo: %muptime
-┊  ✿︎ Usuarios: %totalreg 
-└─────────────
+┏━━━━━━━━ INFO - BOT
+┃  ✿︎ Cliente: %name
+┃  ✿︎ Exp: %exp
+┃  ✿︎ Nivel: %level
+┗━━━━━━━━━━━━━━
+%readmore
+┏━━━━━━━━━ INFO - USER
+┃  ✿︎ Bot: Ian Bot - MD 
+┃  ✿︎ Modo Público
+┃  ✿︎ Baileys: Multi Device
+┃  ✿︎ Tiempo Activo: %muptime
+┃  ✿︎ Usuarios: %totalreg 
+┗━━━━━━━━━━━━━━
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: ' ┏━━━━━━「 ´MENU ✯ %category´ 」━━━━',
-  body: '> 🌸>%cmd',
+    header: ' ┏━━━━━━「 MENU ✯ %category 」━━━━',
+  body: '> 🌸 >%cmd',
   footer: ' ┗━━━━━━\n',
   after: `> ${dev}`,
 }
