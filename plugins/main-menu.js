@@ -4,26 +4,26 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO 🌸',
-  'buscador': 'BUSQUEDAS 🌸',
-  'fun': 'JUEGOS 🌸',
-  'serbot': 'SUB BOTS 🌸',
-  'rpg': 'RPG 🌸',
-  'rg': 'REGISTRO 🌸',
-  'xp': 'EXP 🌸',
-  'sticker': 'STICKERS 🌸',
-  'anime': 'ANIMES 🌸',
-  'database': 'DATABASE 🌸',
-  'fix': 'FIXMSGESPERA 🌸',
-  'grupo': 'GRUPOS 🌸',
-  'nable': 'ON / OFF 🌸', 
-  'descargas': 'DESCARGAS 🌸',
-  'tools': 'HERRAMIENTAS 🌸',
-  'info': 'INFORMACIÓN 🌸',
-  'owner': 'CREADOR 🌸', 
-  'audio': 'AUDIOS 🌸', 
-  'ai': 'AI 🌸',
-  'transformador': 'CONVERTIDORES 🌸',
+  'main': 'INFO 🍬',
+  'buscador': 'BUSQUEDAS 🍬',
+  'fun': 'JUEGOS 🍬',
+  'serbot': 'SUB BOTS 🍬',
+  'rpg': 'RPG 🍬',
+  'rg': 'REGISTRO 🍬',
+  'xp': 'EXP 🍬',
+  'sticker': 'STICKERS 🍬',
+  'anime': 'ANIMES 🍬',
+  'database': 'DATABASE 🍬',
+  'fix': 'FIXMSGESPERA 🍬',
+  'grupo': 'GRUPOS 🍬',
+  'nable': 'ON / OFF 🍬', 
+  'descargas': 'DESCARGAS 🍬',
+  'tools': 'HERRAMIENTAS 🍬',
+  'info': 'INFORMACIÓN 🍬',
+  'owner': 'CREADOR 🍬', 
+  'audio': 'AUDIOS 🍬', 
+  'ai': 'AI 🍬',
+  'transformador': 'CONVERTIDORES 🍬',
 }
 
 const defaultMenu = {
@@ -53,8 +53,8 @@ Hola *%name* soy *Ian*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: ' 🌙「 MENU ✯ %category 」🌙\n ',
-  body: '> 🌸 >%cmd',
+    header: ' ☁「 MENU ✯ %category 」☁\n ',
+  body: '> 🍬>%cmd',
   footer: ' \n',
   after: `> ${dev}`,
 }
@@ -158,8 +158,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let urls = [
-"https://qu.ax/fPX.mp4",
-"https://qu.ax/RYfe.mp4",
+"https://qu.ax/vnPMj.mp4",
+"https://qu.ax/GuYLx.mp4",
+"https://qu.ax/ZynJy.mp4",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
